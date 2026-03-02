@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammad Hanzala — Best WordPress Developer in Pakistan"/>
+  <title>Home — Best WordPress Developer in Pakistan | Muhammad Hanzala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          charcoal: '#1A1A1A', 'warm-gray': '#2C2C2C',
+          ember: '#E8531A', 'ember-lt': '#FF7A45',
+          cream: '#FAF7F2', stone: '#C4B9A8',
+          ink: '#1C1917', pebble: '#78716C',
+        },
+        fontFamily: { sora:['Sora','sans-serif'], poppins:['Poppins','sans-serif'] },
+        boxShadow: {
+          card: '0px 6px 24px rgba(26,26,26,0.10)',
+          'card-hover': '0px 12px 36px rgba(26,26,26,0.18)',
+        }
+      }}
+    }
+</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;}
+    body{font-family:'Poppins',sans-serif;color:#1C1917;background:#FAF7F2;overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Sora',sans-serif;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#FAF7F2;}
+    ::-webkit-scrollbar-thumb{background:#E8531A;border-radius:3px;}
+    #navbar{transition:all .35s ease;}
+    #navbar.scrolled{background:rgba(26,26,26,.97);backdrop-filter:blur(14px);box-shadow:0 4px 30px rgba(0,0,0,.25);}
+    .nav-link{position:relative;transition:color .3s;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#E8531A;transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .hero-bg{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 50%,#1A1A1A 100%);position:relative;overflow:hidden;}
+    .hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.12) 0%,transparent 70%);top:-100px;right:-100px;animation:pulse-glow 4s ease-in-out infinite;}
+    @keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+    .float-badge{animation:float 3s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .section-title{position:relative;display:inline-block;}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:55px;height:4px;background:linear-gradient(90deg,#E8531A,#FF7A45);border-radius:2px;}
+    .btn-ember{background:linear-gradient(135deg,#E8531A,#FF7A45);color:#fff;font-weight:700;transition:transform .3s ease;}
+    .btn-ember:hover{transform:translateY(-3px);}
+    .btn-outline-w{border:2px solid #fff;color:#fff;transition:all .3s ease;font-weight:700;}
+    .btn-outline-w:hover{background:#fff;color:#1A1A1A;transform:translateY(-3px);}
+    .btn-outline-d{border:2px solid #1A1A1A;color:#1A1A1A;transition:all .3s ease;font-weight:700;}
+    .btn-outline-d:hover{background:#1A1A1A;color:#fff;transform:translateY(-3px);}
+    .skill-bar-fill{width:0;transition:width 1.4s cubic-bezier(.25,.46,.45,.94);}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-right.visible{opacity:1;transform:translateX(0);}
+    .gradient-text{background:linear-gradient(135deg,#E8531A,#FF7A45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px;}
+    .noise::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    .typing-cursor{border-right:3px solid #E8531A;animation:blink .8s infinite;padding-right:2px;}
+    @keyframes blink{0%,100%{border-color:#E8531A}50%{border-color:transparent}}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    #mobile-menu.open{max-height:600px;}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:300px;}
+    .faq-icon{transition:transform .35s ease;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .project-overlay{opacity:0;transition:opacity .3s ease;}
+    .project-card:hover .project-overlay{opacity:1;}
+    .project-img{transition:transform .5s ease;}
+    .project-card:hover .project-img{transform:scale(1.06);}
+    .service-card{transition:transform .3s ease,box-shadow .3s ease;}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0px 12px 36px rgba(26,26,26,.18);}
+    .page-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 100%);padding:100px 0 60px;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.1) 0%,transparent 70%);}
+</style>
+</head>
+<body class="antialiased">
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+          <span class="font-sora font-black text-white text-base">H</span>
+        </div>
+        <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember active">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">About</a>
+        <a href="services.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Services</a>
+        <a href="projects.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Projects</a>
+        <a href="contact.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden lg:inline-flex btn-ember px-5 py-2 rounded-full text-sm">
+          Hire Me <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+        <button id="menu-toggle" class="lg:hidden text-white text-xl p-2">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-5 py-3 flex flex-col">
+      <a href="index.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Home</a>
+      <a href="about.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">About</a>
+      <a href="services.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Services</a>
+      <a href="projects.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Projects</a>
+      <a href="contact.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Contact</a>
+      <a href="contact.html" class="btn-ember mt-3 px-5 py-3 rounded-full text-sm text-center">Hire Me Now</a>
+    </div>
+  </div>
+</header>
+<main class="pt-[68px]">
+<!-- HERO -->
+<section class="hero-bg min-h-[calc(100vh-68px)] flex items-center noise">
+  <div class="hero-glow"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20 w-full relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal-left">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
+          <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+          <span class="text-white/80 text-sm font-poppins">Available for new projects</span>
+        </div>
+        <h1 class="font-sora text-4xl lg:text-5xl xl:text-[3.4rem] font-extrabold text-white leading-tight mb-4">
+          Hi, I'm <span class="gradient-text">Muhammad<br>Hanzala</span>
+        </h1>
+        <p class="text-white/70 text-lg font-poppins mb-3 min-h-[1.75rem]">
+          <span id="typed"></span><span class="typing-cursor"></span>
+        </p>
+        <p class="text-white/60 text-base leading-relaxed mb-8 max-w-lg font-poppins">
+          I build fast, beautiful, SEO-optimized websites that <strong class="text-ember-lt font-semibold">rank, convert, and scale</strong>. Pakistan's youngest performance-driven WordPress & full-stack developer.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="contact.html" class="btn-ember px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
+            <i class="fas fa-rocket"></i> Hire Me Now
+          </a>
+          <a href="projects.html" class="btn-outline-w px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
+            <i class="fas fa-eye"></i> View My Work
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-white/30 text-xs uppercase tracking-widest font-poppins">Find Me On</span>
+          <div class="flex gap-2.5">
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-github text-sm"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-upwork text-sm"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right flex justify-center lg:justify-center">
+        <div class="relative">
+          <div class="w-72 h-72 lg:w-[450px] lg:h-[450px] rounded-3xl overflow-hidden border-2 border-ember/30 relative bg-warm-gray flex items-center justify-center">
+            <img src="hanzala.png" alt="Muhammad Hanzala" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover"/>
+  
+          </div>
+          <div class="float-badge absolute -top-4 -left-6 bg-white rounded-2xl shadow-card px-4 py-3 flex items-center gap-2.5">
+            <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center"><i class="fab fa-wordpress text-ink text-sm"></i></div>
+            <div><p class="text-xs text-pebble font-poppins">WordPress</p><p class="text-sm font-bold text-ink font-sora">Expert</p></div>
+          </div>
+          <div class="float-badge absolute -bottom-4 -right-6 bg-white rounded-2xl shadow-card px-4 py-3 flex items-center gap-2.5" style="animation-delay:1s">
+            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"><i class="fas fa-bolt text-green-600 text-sm"></i></div>
+            <div><p class="text-xs text-pebble font-poppins">n8n</p><p class="text-sm font-bold text-ink font-sora">Specialist</p></div>
+          </div>
+          <div class="float-badge absolute top-1/2 -right-12 bg-white rounded-2xl shadow-card px-4 py-3 flex items-center gap-2.5" style="animation-delay:.5s">
+            <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center"><i class="fas fa-star text-amber-500 text-sm"></i></div>
+            <div><p class="text-xs text-pebble font-poppins">Rating</p><p class="text-sm font-bold text-ink font-sora">5.0 ★</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+    <span class="text-white/30 text-xs font-poppins tracking-widest uppercase">Scroll</span>
+    <i class="fas fa-chevron-down text-ember text-sm"></i>
+  </div>
+</section>
+<!-- ABOUT PREVIEW -->
+<!-- ═══════════════════════════════════════════════
+     STATS + ABOUT PREVIEW — Stats as floating badges on image
+════════════════════════════════════════════════ -->
+<section class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+  
+        <!-- LEFT: Image with Floating Stat Badges -->
+        <div class="reveal-left relative">
+  
+          <!-- Main Image Card -->
+          <div class="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-md mx-auto lg:mx-0 flex items-center justify-center border border-stone bg-white">
+            <img src="hani.png" alt="Muhammad Hanzala"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                 class="w-full h-full object-cover"/>
+            
+            <!-- Location badge — bottom left (inside image) -->
+            <div class="absolute bottom-5 left-5 bg-white rounded-2xl shadow-card p-3.5 border border-stone/60 flex items-center gap-3">
+              <div class="w-9 h-9 bg-ember/10 rounded-xl flex items-center justify-center">
+                <i class="fas fa-map-marker-alt text-ember text-sm"></i>
+              </div>
+              <div>
+                <p class="text-xs text-pebble font-poppins">Location</p>
+                <p class="text-sm font-bold text-ink font-sora">Sargodha, Pakistan</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Floating Stat: 100+ Projects — top left -->
+          <div class="float-badge absolute -top-5 -left-4 lg:-left-8 bg-charcoal rounded-2xl shadow-card-hover px-4 py-3.5 flex items-center gap-3 border border-white/10 z-10">
+            <div class="w-9 h-9 bg-ember/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-briefcase text-ember text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xl font-black font-sora text-ember leading-none counter" data-target="100">0</p>
+              <p class="text-white/50 text-xs font-poppins mt-0.5">Web Projects</p>
+            </div>
+          </div>
+  
+          <!-- Floating Stat: 5.0 Rating — top right -->
+          <div class="float-badge absolute -top-5 -right-4 lg:-right-6 bg-ember rounded-2xl px-4 py-3.5 flex items-center gap-3 z-10"
+               style="animation-delay:.6s; box-shadow:0 8px 24px rgba(232,83,26,0.4)">
+            <div class="w-9 h-9 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-star text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xl font-black font-sora text-white leading-none">5.0 ★</p>
+              <p class="text-white/70 text-xs font-poppins mt-0.5">Client Rating</p>
+            </div>
+          </div>
+  
+          <!-- Floating Stat: 3+ Years — right middle -->
+          <div class="float-badge absolute top-1/2 -translate-y-1/2 -right-4 lg:-right-8 bg-white rounded-2xl shadow-card border border-stone/60 px-4 py-3.5 flex items-center gap-3 z-10"
+               style="animation-delay:.3s">
+            <div class="w-9 h-9 bg-charcoal rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-code text-ember text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xl font-black font-sora text-ink leading-none">3+</p>
+              <p class="text-pebble text-xs font-poppins mt-0.5">Yrs Experience</p>
+            </div>
+          </div>
+  
+          <!-- Floating Stat: 25+ Automations — bottom right -->
+          <div class="float-badge absolute -bottom-5 -right-4 lg:-right-6 bg-white rounded-2xl shadow-card border border-stone/60 px-4 py-3.5 flex items-center gap-3 z-10"
+               style="animation-delay:1s">
+            <div class="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-bolt text-green-600 text-sm"></i>
+            </div>
+            <div>
+              <p class="text-xl font-black font-sora text-ink leading-none counter" data-target="25">0</p>
+              <p class="text-pebble text-xs font-poppins mt-0.5">Automations</p>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- RIGHT: Text Content -->
+        <div class="reveal-right">
+          <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">About Me</p>
+          <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mb-8">
+            Pakistan's Best Front-End & WordPress Developer at Just 21
+          </h2>
+          <p class="text-pebble leading-relaxed mb-4 font-poppins">
+            My name is Muhammad Hanzala, and I'm a 21-year-old full-stack developer in Pakistan with a deep passion for WordPress, performance-first design, and building web experiences that actually <strong class="text-ink">grow businesses</strong>.
+          </p>
+          <p class="text-pebble leading-relaxed mb-6 font-poppins">
+            Since I started coding, I've been obsessed with: <em>"How do I make this website faster, rank higher, and convert better?"</em> I'm also one of Pakistan's very few <strong class="text-ink">n8n automation specialists</strong>.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-8">
+            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone/60">
+              <div class="w-8 h-8 bg-ember/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-code text-ember text-xs"></i></div>
+              <p class="font-semibold text-ink text-sm font-sora">Clean Code</p>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone/60">
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-mobile-alt text-blue-500 text-xs"></i></div>
+              <p class="font-semibold text-ink text-sm font-sora">Mobile-First</p>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone/60">
+              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-bolt text-green-600 text-xs"></i></div>
+              <p class="font-semibold text-ink text-sm font-sora">Performance</p>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-stone/60">
+              <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-search text-purple-500 text-xs"></i></div>
+              <p class="font-semibold text-ink text-sm font-sora">SEO-First</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="about.html" class="btn-ember px-7 py-3 rounded-full text-sm inline-flex items-center gap-2">
+              More About Me <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+            <a href="resume.pdf" download class="btn-outline-d px-7 py-3 rounded-full text-sm inline-flex items-center gap-2">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+<!-- SKILLS -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="text-center mb-14 reveal">
+        <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Technical Expertise</p>
+        <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">My Technical Stack</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="reveal bg-cream rounded-3xl p-7 border border-stone/60">
+          <div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-charcoal rounded-xl flex items-center justify-center"><i class="fas fa-desktop text-ember text-sm"></i></div><h3 class="font-bold text-ink font-sora">Frontend</h3></div>
+          <div class="space-y-4">
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-html5 text-orange-500 mr-1.5"></i>HTML5</span><span class="text-sm text-pebble font-poppins">100%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="100"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-css3-alt text-blue-500 mr-1.5"></i>CSS3 / Tailwind</span><span class="text-sm text-pebble font-poppins">95%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="95"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-js text-yellow-500 mr-1.5"></i>JavaScript</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-react text-cyan-500 mr-1.5"></i>React.js</span><span class="text-sm text-pebble font-poppins">85%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="85"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-code text-blue-600 mr-1.5"></i>TypeScript</span><span class="text-sm text-pebble font-poppins">80%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="80"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-bootstrap text-purple-500 mr-1.5"></i>Bootstrap</span><span class="text-sm text-pebble font-poppins">92%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="92"></div></div></div>
+          </div>
+        </div>
+        <div class="reveal bg-cream rounded-3xl p-7 border border-stone/60" style="transition-delay:.15s">
+          <div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-ember rounded-xl flex items-center justify-center"><i class="fas fa-server text-white text-sm"></i></div><h3 class="font-bold text-ink font-sora">Backend & WordPress</h3></div>
+          <div class="space-y-4">
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-wordpress text-blue-500 mr-1.5"></i>WordPress</span><span class="text-sm text-pebble font-poppins">98%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="98"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-php text-indigo-500 mr-1.5"></i>PHP</span><span class="text-sm text-pebble font-poppins">85%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="85"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-node-js text-green-500 mr-1.5"></i>Node.js</span><span class="text-sm text-pebble font-poppins">80%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="80"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-database text-orange-500 mr-1.5"></i>MySQL</span><span class="text-sm text-pebble font-poppins">88%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="88"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-python text-blue-400 mr-1.5"></i>Python (Scraping)</span><span class="text-sm text-pebble font-poppins">75%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="75"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-git-alt text-red-500 mr-1.5"></i>Git & GitHub</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="90"></div></div></div>
+          </div>
+        </div>
+        <div class="reveal bg-cream rounded-3xl p-7 border border-stone/60" style="transition-delay:.3s">
+          <div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-warm-gray rounded-xl flex items-center justify-center"><i class="fas fa-bolt text-ember text-sm"></i></div><h3 class="font-bold text-ink font-sora">Automation & Design</h3></div>
+          <div class="space-y-4">
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-bolt text-green-500 mr-1.5"></i>n8n Automation</span><span class="text-sm text-pebble font-poppins">95%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="95"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-tachometer-alt text-red-500 mr-1.5"></i>Speed Optimization</span><span class="text-sm text-pebble font-poppins">95%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="95"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-search text-purple-500 mr-1.5"></i>Technical SEO</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-figma text-pink-500 mr-1.5"></i>Figma (3 live projects)</span><span class="text-sm text-pebble font-poppins">82%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="82"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-woocommerce text-purple-600 mr-1.5"></i>WooCommerce</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-palette text-teal-500 mr-1.5"></i>Canva & Design Tools</span><span class="text-sm text-pebble font-poppins">88%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="88"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--tools-->
+  <section class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="text-center mb-14 reveal">
+        <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">My Toolkit</p>
+        <h2 class="section-title text-3xl font-extrabold text-ink font-sora mx-auto">Tools I Use Daily</h2>
+      </div>
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-4">
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default"><i class="fab fa-wordpress text-3xl text-blue-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">WordPress</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.05s"><i class="fab fa-react text-3xl text-cyan-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">React</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.1s"><i class="fab fa-node-js text-3xl text-green-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Node.js</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.15s"><i class="fab fa-figma text-3xl text-pink-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Figma</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.2s"><i class="fab fa-github text-3xl text-ink"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">GitHub</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.25s"><i class="fab fa-python text-3xl text-blue-400"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Python</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.3s"><i class="fab fa-bootstrap text-3xl text-purple-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Bootstrap</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.35s"><i class="fas fa-bolt text-3xl text-green-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">n8n</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.4s"><i class="fas fa-tachometer-alt text-3xl text-red-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">WP Rocket</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.45s"><i class="fab fa-git-alt text-3xl text-orange-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Git</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.5s"><i class="fas fa-palette text-3xl text-teal-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Canva</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.55s"><i class="fab fa-woocommerce text-3xl text-purple-600"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">WooCommerce</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.6s"><i class="fas fa-code text-3xl text-blue-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">VS Code</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.65s"><i class="fas fa-database text-3xl text-orange-400"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">MySQL</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.7s"><i class="fab fa-docker text-3xl text-blue-600"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Docker</span></div>
+        <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.75s"><i class="fab fa-google text-3xl text-yellow-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Google Colab</span></div>
+      </div>
+    </div>
+  </section>
+
+<!-- SERVICES PREVIEW -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-4">
+        <div class="reveal">
+          <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">What I Offer</p>
+          <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora">My Core Services</h2>
+        </div>
+        <a href="services.html" class="reveal btn-outline-d px-6 py-2.5 rounded-full text-sm inline-flex items-center gap-2 self-start lg:self-auto">View All Services <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="max-w-7xl mx-auto px-5 lg:px-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7">
+            <div class="w-14 h-14 bg-charcoal rounded-2xl flex items-center justify-center mb-5"><i class="fab fa-wordpress text-2xl text-white"></i></div>
+            <h3 class="font-bold text-ink font-sora text-xl mb-3">Custom WordPress Development</h3>
+            <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">Custom WordPress sites from scratch — not from cookie-cutter templates. Fast-loading, mobile-responsive, SEO-structured, and built to convert visitors into customers.</p>
+            <ul class="space-y-2 mb-5">
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Custom theme from Figma to WordPress</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>WooCommerce & eCommerce solutions</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Plugin customization & conflict resolution</li>
+            </ul>
+            <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+          </div>
+          <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.1s">
+            <div class="w-14 h-14 bg-ember rounded-2xl flex items-center justify-center mb-5"><i class="fab fa-react text-2xl text-white"></i></div>
+            <h3 class="font-bold text-ink font-sora text-xl mb-3">Front-End Development</h3>
+            <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">Pixel-perfect, responsive web experiences using HTML, CSS, JavaScript, TypeScript, and React. Clean, semantic code that search engines love and users trust.</p>
+            <ul class="space-y-2 mb-5">
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>React SPAs & web applications</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Tailwind CSS & Bootstrap layouts</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>TypeScript & modern JavaScript</li>
+            </ul>
+            <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+          </div>
+          <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.2s">
+            <div class="w-14 h-14 bg-green-600 rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-bolt text-2xl text-white"></i></div>
+            <h3 class="font-bold text-ink font-sora text-xl mb-3">n8n Automation & Workflows</h3>
+            <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">One of Pakistan's very few n8n specialists. I help businesses automate repetitive tasks, connect apps, and build powerful workflows that save hours every week.</p>
+            <ul class="space-y-2 mb-5">
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Custom n8n workflow design</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>API integrations (CRMs, e-commerce)</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Python + Google Colab scraping pipelines</li>
+            </ul>
+            <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+          </div>
+          <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.3s">
+            <div class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-search text-2xl text-white"></i></div>
+            <h3 class="font-bold text-ink font-sora text-xl mb-3">SEO-Optimized Development</h3>
+            <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">A beautiful website nobody finds is worthless. I build with SEO baked in — structured data, Core Web Vitals, and clean architecture that ranks.</p>
+            <ul class="space-y-2 mb-5">
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Technical SEO implementation</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Core Web Vitals (LCP, FID, CLS)</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Schema markup & structured data</li>
+            </ul>
+            <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+          </div>
+          <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.4s">
+            <div class="w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-tachometer-alt text-2xl text-white"></i></div>
+            <h3 class="font-bold text-ink font-sora text-xl mb-3">Performance Optimization</h3>
+            <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">I specialize in making slow websites blazing fast. 90+ PageSpeed scores, WP Rocket setup, CDN configuration, and full image optimization.</p>
+            <ul class="space-y-2 mb-5">
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>WP Rocket & caching setup</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Image optimization (WebP, lazy load)</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Database & query optimization</li>
+            </ul>
+            <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+          </div>
+          <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.5s">
+            <div class="w-14 h-14 bg-pink-600 rounded-2xl flex items-center justify-center mb-5"><i class="fab fa-figma text-2xl text-white"></i></div>
+            <h3 class="font-bold text-ink font-sora text-xl mb-3">UI/UX Design (Figma)</h3>
+            <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">Delivered 3 live Figma projects. Clean, conversion-focused UI design bridging the gap between beautiful design and functional development.</p>
+            <ul class="space-y-2 mb-5">
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Wireframing & prototyping</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Design to development handoff</li>
+              <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Component design systems</li>
+            </ul>
+            <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+  
+        <!-- Left: Reasons -->
+        <div class="reveal-left">
+          <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Why Work With Me</p>
+          <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mb-8">
+            Why I'm the Best Web Developer for Your Project
+          </h2>
+          <p class="text-pebble font-poppins leading-relaxed mb-8">
+            There are thousands of developers out there. Here's why clients who find me — keep coming back. I don't just build websites, I build <strong class="text-ink">digital business assets</strong> that rank, convert, and scale.
+          </p>
+  
+          <div class="flex flex-col gap-5">
+            <!-- Reason 1 -->
+            <div class="flex items-start gap-4 bg-white rounded-2xl border border-stone/60 p-5 hover:border-ember transition-colors duration-300">
+              <div class="w-11 h-11 bg-ember/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-rocket text-ember text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink font-sora mb-1">I Build for Speed AND Rankings</h4>
+                <p class="text-pebble text-sm font-poppins leading-relaxed">Sites that load under 2 seconds, score 90+ on PageSpeed Insights, and are structured to rank on Google from day one.</p>
+              </div>
+            </div>
+  
+            <!-- Reason 2 -->
+            <div class="flex items-start gap-4 bg-white rounded-2xl border border-stone/60 p-5 hover:border-ember transition-colors duration-300">
+              <div class="w-11 h-11 bg-charcoal rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-brain text-ember text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink font-sora mb-1">I Think Like a Business Owner</h4>
+                <p class="text-pebble text-sm font-poppins leading-relaxed">At 21, I've published 500+ blogs, built automation systems, and studied how digital businesses scale. That thinking comes to every project.</p>
+              </div>
+            </div>
+  
+            <!-- Reason 3 -->
+            <div class="flex items-start gap-4 bg-white rounded-2xl border border-stone/60 p-5 hover:border-ember transition-colors duration-300">
+              <div class="w-11 h-11 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-bolt text-green-600 text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink font-sora mb-1">Automation Changes the Game</h4>
+                <p class="text-pebble text-sm font-poppins leading-relaxed">With my n8n expertise, I can automate parts of your business you didn't know could be automated — saving hours every week.</p>
+              </div>
+            </div>
+  
+            <!-- Reason 4 -->
+            <div class="flex items-start gap-4 bg-white rounded-2xl border border-stone/60 p-5 hover:border-ember transition-colors duration-300">
+              <div class="w-11 h-11 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-seedling text-purple-500 text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink font-sora mb-1">Young, Hungry & Always Learning</h4>
+                <p class="text-pebble text-sm font-poppins leading-relaxed">Being 21 means I actively follow the latest WordPress updates, SEO algorithm changes, and development trends. You get a developer who's ahead of the curve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right: Stats Grid -->
+        <div class="reveal-right grid grid-cols-2 gap-5">
+  
+          <!-- Stat 1 -->
+          <div class="bg-charcoal rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-card-hover">
+            <div class="text-5xl font-black font-sora text-ember mb-2">100+</div>
+            <p class="text-white/60 text-sm font-poppins">Projects Completed</p>
+          </div>
+  
+          <!-- Stat 2 -->
+          <div class="bg-white border border-stone/60 rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-card">
+            <div class="text-5xl font-black font-sora text-ink mb-2">2+</div>
+            <p class="text-pebble text-sm font-poppins">Years Experience</p>
+          </div>
+  
+          <!-- Stat 3 -->
+          <div class="bg-white border border-stone/60 rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-card">
+            <div class="text-5xl font-black font-sora text-ink mb-2">25+</div>
+            <p class="text-pebble text-sm font-poppins">Automation Workflows</p>
+          </div>
+  
+          <!-- Stat 4 — Rating -->
+          <div class="bg-ember rounded-3xl p-6 flex flex-col items-center justify-center text-center"
+               style="box-shadow: 0 8px 30px rgba(232,83,26,0.35);">
+            <div class="text-5xl font-black font-sora text-white mb-1">5.0</div>
+            <div class="text-white text-lg mb-1">★★★★★</div>
+            <p class="text-white/80 text-sm font-poppins">Client Rating</p>
+          </div>
+  
+          <!-- Full-width Experience Card -->
+          <div class="col-span-2 bg-charcoal rounded-3xl p-5 flex items-center gap-5 shadow-card-hover">
+            <div class="w-14 h-14 bg-ember rounded-2xl flex items-center justify-center flex-shrink-0"
+                 style="box-shadow: 0 6px 20px rgba(232,83,26,0.4);">
+              <i class="fas fa-building text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="text-white font-bold font-sora">Head of Web Development</p>
+              <p class="text-ember font-semibold text-sm font-poppins">Growistan • 1+ Year</p>
+              <p class="text-white/40 text-xs font-poppins mt-0.5">Leading full dev team & client projects</p>
+            </div>
+            <div class="ml-auto hidden sm:flex items-center gap-2 bg-ember/20 border border-ember/30 rounded-full px-4 py-2">
+              <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+              <span class="text-ember text-xs font-poppins font-semibold">Active</span>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- PROJECTS PREVIEW -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="flex flex-wrap gap-3 justify-center mb-10 reveal">
+        <button class="filter-tab bg-charcoal text-white px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="all">All Projects</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="ecommerce">E-commerce</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="corporate">Corporate</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="education">Education</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="tourism">Tourism</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="portfolio">Portfolio</button>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Cybersilo -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/cybersilo.png" alt="Cybersilo" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>CYBERSILO</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-ember text-white">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Cybersilo</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Cybersecurity & tech company — custom development with n8n automation workflows and JSON API integrations.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">JavaScript</span><span class="tag bg-white text-pebble border border-stone/60">n8n</span><span class="tag bg-white text-pebble border border-stone/60">JSON API</span></div>
+          </div>
+        </div>
+      
+        <!-- Lexro -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="ecommerce">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/lexro.png" alt="Lexro" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>LEXRO</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-ember text-white">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Lexro</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Premium bottles e-commerce store with advanced product filtering, cart system, and seamless payment integration.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WooCommerce</span><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span></div>
+          </div>
+        </div>
+      
+        <!-- Waze Driving School -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/driving.png" alt="Waze Driving School" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Waze Driving</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2023</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Waze Driving School</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">UK-based driving school website with lesson booking system, instructor profiles, and online enquiry forms.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">JavaScript</span></div>
+          </div>
+        </div>
+      
+        <!-- Khan Law Company -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/klc.png" alt="Khan Law Company" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Khan Law</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2023</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Khan Law Company</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Professional law firm website with case management features, attorney profiles, and client consultation booking.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">MySQL</span></div>
+          </div>
+        </div>
+      
+        <!-- Growistan -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/growistan.png" alt="Growistan" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>GROWISTAN</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Growistan Agency</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Full digital agency website — led as Head of Web Development with SEO-first architecture and performance optimization.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">SEO</span></div>
+          </div>
+        </div>
+      
+        <!-- Nikkah Pro -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/nikkah.png" alt="Nikkah Pro" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Nikkah Pro</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Nikkah Pro</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Online nikkah services platform with appointment scheduling, Islamic ceremony management, and secure client portal.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">WooCommerce</span></div>
+          </div>
+        </div>
+      
+        <!-- Pkg2Say -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/pkg2say.png" alt="Pkg2Say" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Pkg2Say</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Pkg2Say</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">New Jersey-based courier & logistics company with shipment tracking, quote calculator, and delivery management system.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">JavaScript</span></div>
+          </div>
+        </div>
+      
+        <!-- Study Abroad -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="education">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/studyabroad.png" alt="Study Abroad" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>Study Abroad</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2023</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Study Abroad</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">International education consultancy with university listings, application management, and student guidance portal.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">MySQL</span></div>
+          </div>
+        </div>
+      
+        <!-- Mailnd Tech -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/mailindtech.png" alt="Mailnd Tech" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Mailnd Tech</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Mailnd Tech</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Digital marketing agency website with service showcases, campaign portfolio, and client lead generation system.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">SEO</span></div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+ <!--how i work--> 
+<section class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="text-center mb-14 reveal">
+        <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">My Process</p>
+        <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">How I Work — Idea to Launch</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">01</div><div class="w-12 h-12 bg-charcoal rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-comments text-ember text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Discovery Call</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Understanding your business goals, target audience, and project requirements before a single line of code is written.</p></div>
+        <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.1s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">02</div><div class="w-12 h-12 bg-ember rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-lightbulb text-white text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Strategy & Planning</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Detailed project roadmap, sitemap, SEO keyword strategy, and technical architecture plan — before design begins.</p></div>
+        <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.2s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">03</div><div class="w-12 h-12 bg-pink-600 rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fab fa-figma text-white text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">UI/UX Design</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">High-fidelity Figma designs with feedback incorporated. Pixel-perfect, conversion-focused interfaces.</p></div>
+        <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.3s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">04</div><div class="w-12 h-12 bg-charcoal rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-code text-ember text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Development</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Clean, semantic, SEO-optimized code. WordPress, React, PHP, Node.js — whichever stack best fits your project.</p></div>
+        <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.4s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">05</div><div class="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-vial text-white text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Testing & Optimization</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Cross-browser testing, performance tuning (90+ PageSpeed), security hardening, and final QA checks.</p></div>
+        <div class="reveal bg-charcoal rounded-3xl p-7 relative overflow-hidden" style="transition-delay:.5s"><div class="absolute top-4 right-4 text-6xl font-black text-warm-gray font-sora leading-none select-none">06</div><div class="w-12 h-12 bg-ember/20 rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-rocket text-ember text-lg"></i></div><h3 class="font-bold text-white font-sora text-lg mb-2 relative z-10">Launch & Support</h3><p class="text-white/60 text-sm font-poppins leading-relaxed relative z-10">Smooth deployment, Google Search Console setup, sitemap submission, and ongoing post-launch support.</p></div>
+      </div>
+    </div>
+  </section>
+
+<!-- n8n SECTION -->
+<section class="py-24 bg-charcoal noise relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-ember/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal-left">
+          <div class="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/40 rounded-full px-4 py-2 mb-5"><i class="fas fa-bolt text-green-400 text-sm"></i><span class="text-green-400 text-sm font-poppins font-semibold">Pakistan's #1 n8n Specialist</span></div>
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-white font-sora mb-5 leading-tight">Automate Your Business with <span class="gradient-text">n8n Workflows</span></h2>
+          <p class="text-white/60 font-poppins leading-relaxed mb-8">As one of the very few developers in Pakistan with deep n8n expertise, I help businesses automate repetitive tasks, connect apps, and build powerful workflows without complex backend code.</p>
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fas fa-share-alt text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">API Integrations</h4><p class="text-white/40 text-xs font-poppins">CRMs, email tools, platforms</p></div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fas fa-file-alt text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">Content Pipelines</h4><p class="text-white/40 text-xs font-poppins">Blog & social automation</p></div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fab fa-python text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">Python Scraping</h4><p class="text-white/40 text-xs font-poppins">Google Colab & sheets</p></div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fas fa-cogs text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">Business Automation</h4><p class="text-white/40 text-xs font-poppins">Save hours every week</p></div>
+          </div>
+          <a href="contact.html" class="btn-ember px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2"><i class="fas fa-bolt"></i> Get Automation Consultation</a>
+        </div>
+        <div class="reveal-right">
+          <div class="bg-white/5 border border-white/10 rounded-3xl p-7">
+            <div class="flex items-center gap-2 mb-5"><div class="flex gap-1.5"><div class="w-3 h-3 rounded-full bg-red-400"></div><div class="w-3 h-3 rounded-full bg-yellow-400"></div><div class="w-3 h-3 rounded-full bg-green-400"></div></div><span class="text-white/30 text-xs font-poppins">n8n Workflow</span></div>
+            <div class="space-y-3 font-poppins">
+              <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/10"><div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-play text-green-400 text-xs"></i></div><div><p class="text-white text-xs font-semibold">Trigger: New Form Submission</p><p class="text-white/30 text-xs">Webhook / Schedule</p></div></div>
+              <div class="flex justify-center"><div class="w-0.5 h-3 bg-ember/40"></div></div>
+              <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/10"><div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-filter text-blue-400 text-xs"></i></div><div><p class="text-white text-xs font-semibold">Filter & Transform Data</p><p class="text-white/30 text-xs">Conditional Logic</p></div></div>
+              <div class="flex justify-center"><div class="w-0.5 h-3 bg-ember/40"></div></div>
+              <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/10"><div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-purple-400 text-xs"></i></div><div><p class="text-white text-xs font-semibold">Send to CRM + Email</p><p class="text-white/30 text-xs">Multi-channel output</p></div></div>
+              <div class="flex justify-center"><div class="w-0.5 h-3 bg-ember/40"></div></div>
+              <div class="flex items-center gap-3 bg-ember/20 rounded-xl p-3 border border-ember/40"><div class="w-8 h-8 bg-ember/30 rounded-lg flex items-center justify-center"><i class="fas fa-check text-ember text-xs"></i></div><div><p class="text-ember text-xs font-semibold">Workflow Complete — Hours Saved!</p><p class="text-ember/50 text-xs">Fully automated</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- TESTIMONIALS -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="text-center mb-14 reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Client Love</p>
+      <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">What My Clients Say</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7 flex flex-col">
+        <div class="flex gap-1 mb-4"><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i></div>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-6 flex-1">"Hanzala delivered our e-commerce platform ahead of schedule and exceeded expectations. Our online sales increased by 150% since launch!"</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-stone/60">
+          <div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center"><span class="text-ember font-black font-sora text-sm">N</span></div>
+          <div><p class="font-bold text-ink text-sm font-sora">Nazeer Ahmed</p><p class="text-pebble text-xs font-poppins">CEO, NB Disruptors</p></div>
+        </div>
+      </div>
+      <div class="reveal bg-charcoal rounded-3xl p-7 flex flex-col" style="transition-delay:.1s">
+        <div class="flex gap-1 mb-4"><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i></div>
+        <p class="text-white/70 font-poppins text-sm leading-relaxed mb-6 flex-1">"His WordPress expertise transformed our university website. The student portal significantly improved our online learning experience."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div class="w-10 h-10 bg-ember rounded-full flex items-center justify-center"><span class="text-white font-black font-sora text-sm">F</span></div>
+          <div><p class="font-bold text-white text-sm font-sora">Farhan Shafi</p><p class="text-white/40 text-xs font-poppins">Director, Brainwells</p></div>
+        </div>
+      </div>
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7 flex flex-col" style="transition-delay:.2s">
+        <div class="flex gap-1 mb-4"><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i><i class="fas fa-star text-ember text-sm"></i></div>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-6 flex-1">"The case management system Hanzala built has streamlined our entire workflow. Exceptional attention to detail and understanding of our needs."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-stone/60">
+          <div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center"><span class="text-ember font-black font-sora text-sm">B</span></div>
+          <div><p class="font-bold text-ink text-sm font-sora">Bilal Khan</p><p class="text-pebble text-xs font-poppins">CEO, Khan Law Company</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 bg-cream">
+    <div class="max-w-3xl mx-auto px-5 lg:px-10">
+      <div class="text-center mb-12 reveal">
+        <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">FAQ</p>
+        <h2 class="section-title text-3xl font-extrabold text-ink font-sora mx-auto">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3 reveal">
+        <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">What services do you offer?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">I offer WordPress development, React/front-end development, n8n automation workflows, SEO-optimized development, performance optimization, and Figma UI/UX design.</p></div></div>
+        <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">How long does a typical project take?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">A simple landing page: 3-5 days. A standard WordPress website: 1-2 weeks. A complex e-commerce or React application: 3-6 weeks. I always provide a clear timeline before starting.</p></div></div>
+        <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">Do you work with international clients?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">Yes! I've worked with clients from the UAE, UK, and across Pakistan. I'm comfortable with remote collaboration and flexible with time zones.</p></div></div>
+        <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">Do you provide ongoing support after launch?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">Yes! I offer post-launch support and maintenance packages including security updates, performance monitoring, and feature additions.</p></div></div>
+        <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">Can you help with website SEO?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">Absolutely. SEO-aware development is a core part of every project — semantic HTML, heading structure, schema markup, clean URLs, fast load times, and Core Web Vitals optimization.</p></div></div>
+      </div>
+    </div>
+  </section>
+<!-- Contact form -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="grid lg:grid-cols-5 gap-10">
+        <!-- Info -->
+        <div class="lg:col-span-2 reveal-left space-y-4">
+          <div class="flex items-center gap-4 bg-cream rounded-2xl p-5 border border-stone/60">
+            <div class="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-ember"></i></div>
+            <div><p class="text-xs text-pebble font-poppins mb-0.5">Location</p><p class="font-semibold text-ink font-sora">Sargodha, Punjab, Pakistan</p></div>
+          </div>
+          <div class="flex items-center gap-4 bg-cream rounded-2xl p-5 border border-stone/60">
+            <div class="w-12 h-12 bg-ember rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-white"></i></div>
+            <div><p class="text-xs text-pebble font-poppins mb-0.5">Email</p><a href="mailto:hanzala5c9@gmail.com" class="font-semibold text-ink font-sora hover:text-ember transition-colors">hanzala5c9@gmail.com</a></div>
+          </div>
+          <div class="flex items-center gap-4 bg-cream rounded-2xl p-5 border border-stone/60">
+            <div class="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone text-ember"></i></div>
+            <div><p class="text-xs text-pebble font-poppins mb-0.5">Phone / WhatsApp</p><a href="tel:+923249473885" class="font-semibold text-ink font-sora hover:text-ember transition-colors">+92 324 9473885</a></div>
+          </div>
+          <div class="bg-charcoal rounded-2xl p-5">
+            <p class="text-white/50 text-xs font-poppins mb-4 uppercase tracking-wider">Connect on social</p>
+            <div class="flex gap-2.5">
+              <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
+              <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-github text-sm"></i></a>
+              <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-whatsapp text-sm"></i></a>
+              <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-upwork text-sm"></i></a>
+            </div>
+          </div>
+          <div class="bg-cream rounded-2xl p-5 border border-stone/60">
+            <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 bg-ember rounded-lg flex items-center justify-center"><i class="fas fa-building text-white text-sm"></i></div><div><p class="text-xs text-pebble font-poppins">Current Role</p><p class="font-semibold text-ink text-sm font-sora">Head of Web Dev @ Growistan</p></div></div>
+            <p class="text-pebble text-xs font-poppins">Leading full dev team · 1+ year · Open to freelance</p>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="lg:col-span-3 reveal-right">
+          <form id="contact-form" class="bg-cream rounded-3xl p-7 border border-stone/60">
+            <h3 class="font-bold text-ink font-sora text-xl mb-6">Tell Me About Your Project</h3>
+            <div class="grid sm:grid-cols-2 gap-5 mb-5">
+              <div><label class="block text-sm font-semibold text-ink font-sora mb-2">Your Name</label><input type="text" placeholder="Muhammad Ali" required class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink placeholder-pebble/60 focus:outline-none focus:border-ember transition-colors"/></div>
+              <div><label class="block text-sm font-semibold text-ink font-sora mb-2">Email Address</label><input type="email" placeholder="your@email.com" required class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink placeholder-pebble/60 focus:outline-none focus:border-ember transition-colors"/></div>
+            </div>
+            <div class="mb-5"><label class="block text-sm font-semibold text-ink font-sora mb-2">Project Type</label><select class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink focus:outline-none focus:border-ember transition-colors appearance-none"><option value="">Select a service...</option><option>Custom WordPress Development</option><option>Front-End Development (React/JS)</option><option>n8n Automation & Workflows</option><option>Performance Optimization</option><option>SEO-Optimized Development</option><option>UI/UX Design (Figma)</option><option>Other</option></select></div>
+            <div class="mb-5"><label class="block text-sm font-semibold text-ink font-sora mb-2">Project Budget</label><select class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink focus:outline-none focus:border-ember transition-colors appearance-none"><option value="">Select budget range...</option><option>Under $300</option><option>$300 – $800</option><option>$800 – $2,000</option><option>$2,000+</option></select></div>
+            <div class="mb-6"><label class="block text-sm font-semibold text-ink font-sora mb-2">Message</label><textarea rows="4" placeholder="Describe your project goals, timeline, and any specific requirements..." class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink placeholder-pebble/60 focus:outline-none focus:border-ember transition-colors resize-none"></textarea></div>
+            <button type="submit" class="btn-ember w-full py-4 rounded-2xl text-base flex items-center justify-center gap-3 font-sora font-bold"><i class="fas fa-paper-plane"></i>Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="bg-charcoal pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Col 1: Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+            <span class="font-sora font-black text-white text-base">H</span>
+          </div>
+          <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+        </div>
+        <p class="text-white/50 font-poppins text-sm leading-relaxed mb-5">Pakistan's youngest performance-driven WordPress & full-stack developer. Building digital experiences that rank, convert, and scale.</p>
+        <div class="flex gap-2.5">
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-linkedin-in text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-github text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-whatsapp text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-upwork text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Pages -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Home</a></li>
+          <li><a href="about.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>About Me</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Services</a></li>
+          <li><a href="projects.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Projects</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>WordPress Dev</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>React Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>n8n Automation</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Speed Optimization</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>SEO Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Contact</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-ember text-xs"></i></div>
+            <p class="text-white/50 text-sm font-poppins">Sargodha, Punjab, Pakistan</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-envelope text-ember text-xs"></i></div>
+            <a href="mailto:hanzala5c9@gmail.com" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">hanzala5c9@gmail.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone text-ember text-xs"></i></div>
+            <a href="tel:+923249473885" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">+92 324 9473885</a>
+          </div>
+          <div class="mt-4 inline-flex items-center gap-2 bg-ember/20 border border-ember/30 rounded-full px-4 py-2">
+            <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+            <span class="text-ember text-xs font-poppins font-semibold">Available for Projects</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-white/40 text-xs font-poppins">© 2025 Muhammad Hanzala. All Rights Reserved.</p>
+      <p class="text-ember/50 text-xs font-poppins">Best WordPress Developer in Pakistan</p>
+    </div>
+  </div>
+</footer>
+<script>
+  // Sticky nav
+  window.addEventListener('scroll',()=>{
+    const n=document.getElementById('navbar');
+    n&&(window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled'));
+  });
+  // Mobile menu
+  const mt=document.getElementById('menu-toggle');
+  if(mt){
+    mt.addEventListener('click',()=>{
+      const m=document.getElementById('mobile-menu');
+      const ic=document.getElementById('menu-icon');
+      m.classList.toggle('open');
+      ic.classList.toggle('fa-bars');
+      ic.classList.toggle('fa-times');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('menu-icon').classList.replace('fa-times','fa-bars');
+    }));
+  }
+  // Reveal
+  const ro=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+  // Counters
+  const co=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target,t=+el.dataset.target,inc=t/60;
+        let c=0;
+        const ti=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t+'+';clearInterval(ti);}else el.textContent=Math.floor(c);},25);
+        co.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+  // Skill bars
+  const so=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.style.width=b.dataset.width+'%');so.unobserve(e.target);}});
+  },{threshold:.2});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>so.observe(el));
+  // FAQ
+  document.querySelectorAll('.faq-trigger').forEach(tr=>{
+    tr.addEventListener('click',()=>{
+      const item=tr.closest('.faq-item'),ans=item.querySelector('.faq-answer'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').classList.remove('open');});
+      if(!open){item.classList.add('open');ans.classList.add('open');}
+    });
+  });
+  // Project filter
+  document.querySelectorAll('.filter-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-tab').forEach(t=>{t.classList.remove('bg-charcoal','text-white');t.classList.add('bg-white','text-ink','border','border-stone');});
+      tab.classList.add('bg-charcoal','text-white');tab.classList.remove('bg-white','text-ink','border','border-stone');
+      const f=tab.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(c=>{c.style.display=(f==='all'||c.dataset.category===f)?'block':'none';});
+    });
+  });
+  // Contact form
+  const cf=document.getElementById('contact-form');
+  if(cf){cf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=cf.querySelector('button[type="submit"]');
+    btn.innerHTML='<i class="fas fa-check mr-2"></i> Message Sent! Ill reply within 24 hours.'
+    btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane mr-2"></i>Send Message';btn.style.background='';cf.reset();},3000);
+  });}
+  // Typing
+  const typedEl=document.getElementById('typed');
+  if(typedEl){
+    const texts=["Best WordPress Developer in Pakistan","Full Stack Developer (React + Node.js)","n8n Automation Specialist","Performance & SEO Expert","Head of Web Dev @ Growistan"];
+    let ti=0,ci=0,del=false;
+    function type(){
+      const cur=texts[ti];
+      typedEl.textContent=del?cur.substring(0,ci--):cur.substring(0,ci++);
+      let d=del?40:80;
+      if(!del&&ci===cur.length+1){d=2000;del=true;}
+      else if(del&&ci===0){del=false;ti=(ti+1)%texts.length;d=400;}
+      setTimeout(type,d);
+    }
+    type();
+  }
+</script></body></html>

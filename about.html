@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammad Hanzala — Best WordPress Developer in Pakistan"/>
+  <title>About — Muhammad Hanzala | Muhammad Hanzala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          charcoal: '#1A1A1A', 'warm-gray': '#2C2C2C',
+          ember: '#E8531A', 'ember-lt': '#FF7A45',
+          cream: '#FAF7F2', stone: '#C4B9A8',
+          ink: '#1C1917', pebble: '#78716C',
+        },
+        fontFamily: { sora:['Sora','sans-serif'], poppins:['Poppins','sans-serif'] },
+        boxShadow: {
+          card: '0px 6px 24px rgba(26,26,26,0.10)',
+          'card-hover': '0px 12px 36px rgba(26,26,26,0.18)',
+        }
+      }}
+    }
+</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;}
+    body{font-family:'Poppins',sans-serif;color:#1C1917;background:#FAF7F2;overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Sora',sans-serif;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#FAF7F2;}
+    ::-webkit-scrollbar-thumb{background:#E8531A;border-radius:3px;}
+    #navbar{transition:all .35s ease;}
+    #navbar.scrolled{background:rgba(26,26,26,.97);backdrop-filter:blur(14px);box-shadow:0 4px 30px rgba(0,0,0,.25);}
+    .nav-link{position:relative;transition:color .3s;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#E8531A;transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .hero-bg{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 50%,#1A1A1A 100%);position:relative;overflow:hidden;}
+    .hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.12) 0%,transparent 70%);top:-100px;right:-100px;animation:pulse-glow 4s ease-in-out infinite;}
+    @keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+    .float-badge{animation:float 3s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .section-title{position:relative;display:inline-block;}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:55px;height:4px;background:linear-gradient(90deg,#E8531A,#FF7A45);border-radius:2px;}
+    .btn-ember{background:linear-gradient(135deg,#E8531A,#FF7A45);color:#fff;font-weight:700;transition:transform .3s ease;}
+    .btn-ember:hover{transform:translateY(-3px);}
+    .btn-outline-w{border:2px solid #fff;color:#fff;transition:all .3s ease;font-weight:700;}
+    .btn-outline-w:hover{background:#fff;color:#1A1A1A;transform:translateY(-3px);}
+    .btn-outline-d{border:2px solid #1A1A1A;color:#1A1A1A;transition:all .3s ease;font-weight:700;}
+    .btn-outline-d:hover{background:#1A1A1A;color:#fff;transform:translateY(-3px);}
+    .skill-bar-fill{width:0;transition:width 1.4s cubic-bezier(.25,.46,.45,.94);}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-right.visible{opacity:1;transform:translateX(0);}
+    .gradient-text{background:linear-gradient(135deg,#E8531A,#FF7A45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px;}
+    .noise::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    .typing-cursor{border-right:3px solid #E8531A;animation:blink .8s infinite;padding-right:2px;}
+    @keyframes blink{0%,100%{border-color:#E8531A}50%{border-color:transparent}}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    #mobile-menu.open{max-height:600px;}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:300px;}
+    .faq-icon{transition:transform .35s ease;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .project-overlay{opacity:0;transition:opacity .3s ease;}
+    .project-card:hover .project-overlay{opacity:1;}
+    .project-img{transition:transform .5s ease;}
+    .project-card:hover .project-img{transform:scale(1.06);}
+    .service-card{transition:transform .3s ease,box-shadow .3s ease;}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0px 12px 36px rgba(26,26,26,.18);}
+    .page-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 100%);padding:100px 0 60px;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.1) 0%,transparent 70%);}
+</style>
+</head>
+<body class="antialiased">
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+          <span class="font-sora font-black text-white text-base">H</span>
+        </div>
+        <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember active">About</a>
+        <a href="services.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Services</a>
+        <a href="projects.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Projects</a>
+        <a href="contact.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden lg:inline-flex btn-ember px-5 py-2 rounded-full text-sm">
+          Hire Me <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+        <button id="menu-toggle" class="lg:hidden text-white text-xl p-2">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-5 py-3 flex flex-col">
+      <a href="index.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Home</a>
+      <a href="about.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">About</a>
+      <a href="services.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Services</a>
+      <a href="projects.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Projects</a>
+      <a href="contact.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Contact</a>
+      <a href="contact.html" class="btn-ember mt-3 px-5 py-3 rounded-full text-sm text-center">Hire Me Now</a>
+    </div>
+  </div>
+</header>
+<main class="pt-[68px]">
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 relative z-10">
+    <div class="reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Get to Know Me</p>
+      <h1 class="font-sora text-4xl lg:text-5xl font-extrabold text-white mb-4">About <span class="gradient-text">Muhammad Hanzala</span></h1>
+      <p class="text-white/60 font-poppins max-w-xl">Pakistan's youngest performance-driven WordPress & full-stack developer — building digital foundations, not just websites.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT FULL -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <div class="reveal-left sticky top-24">
+        <div class="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-md flex items-center justify-center border border-stone bg-cream">
+          <img src="hanzala.png" alt="Muhammad Hanzala" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" class="w-full h-full object-cover"/>
+         
+          <div class="absolute bottom-5 left-5 bg-white rounded-2xl shadow-card p-4 border border-stone/60 flex items-center gap-3">
+            <div class="w-9 h-9 bg-ember/10 rounded-xl flex items-center justify-center"><i class="fas fa-map-marker-alt text-ember text-sm"></i></div>
+            <div><p class="text-xs text-pebble font-poppins">Location</p><p class="text-sm font-bold text-ink font-sora">Sargodha, Pakistan</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Who Am I</p>
+        <h2 class="section-title text-3xl font-extrabold text-ink font-sora mb-8">A Developer Who Thinks Like a Business Owner</h2>
+        <p class="text-pebble leading-relaxed mb-4 font-poppins">My name is Muhammad Hanzala, and I'm a 21-year-old full-stack developer in Pakistan with a deep passion for WordPress, performance-first design, and building web experiences that <strong class="text-ink">actually grow businesses</strong>.</p>
+        <p class="text-pebble leading-relaxed mb-4 font-poppins">Since I started coding, I've been obsessed with: <em>"How do I make this website faster, rank higher, and convert better?"</em> That mindset has driven me to become one of Pakistan's most well-rounded web developers.</p>
+        <p class="text-pebble leading-relaxed mb-8 font-poppins">I work across the full front-end stack and go deep into WordPress internals. I'm also a <strong class="text-ink">certified n8n automation specialist</strong> — helping businesses automate repetitive tasks and save hours every week. Additionally, I use Python with Google Colab for data scraping and have delivered <strong class="text-ink">3 live Figma projects</strong>.</p>
+        <div class="grid grid-cols-2 gap-3 mb-8">
+          <div class="flex items-center gap-3 p-3.5 bg-cream rounded-xl border border-stone/60"><div class="w-8 h-8 bg-ember/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-code text-ember text-xs"></i></div><p class="font-semibold text-ink text-sm font-sora">Clean Code</p></div>
+          <div class="flex items-center gap-3 p-3.5 bg-cream rounded-xl border border-stone/60"><div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-mobile-alt text-blue-500 text-xs"></i></div><p class="font-semibold text-ink text-sm font-sora">Mobile-First</p></div>
+          <div class="flex items-center gap-3 p-3.5 bg-cream rounded-xl border border-stone/60"><div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-bolt text-green-600 text-xs"></i></div><p class="font-semibold text-ink text-sm font-sora">90+ PageSpeed</p></div>
+          <div class="flex items-center gap-3 p-3.5 bg-cream rounded-xl border border-stone/60"><div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-search text-purple-500 text-xs"></i></div><p class="font-semibold text-ink text-sm font-sora">SEO-First</p></div>
+        </div>
+        <a href="resume.pdf" download class="btn-outline-d px-7 py-3 rounded-full text-sm inline-flex items-center gap-2"><i class="fas fa-download"></i> Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     EXPERIENCE & TIMELINE SECTION
+════════════════════════════════════════════════ -->
+<section id="experience" class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+  
+      <!-- Heading -->
+      <div class="text-center mb-16 reveal">
+        <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Professional Journey</p>
+        <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">
+          My Experience & Timeline
+        </h2>
+      </div>
+  
+      <div class="max-w-4xl mx-auto">
+  
+        <!-- Featured: Growistan -->
+        <div class="reveal mb-10">
+          <div class="rounded-3xl overflow-hidden shadow-card-hover border border-stone/60">
+            <div class="bg-charcoal p-6 lg:p-8 relative overflow-hidden">
+              <div class="absolute -top-10 -right-10 w-48 h-48 bg-ember/10 rounded-full blur-2xl pointer-events-none"></div>
+              <div class="flex flex-wrap items-start justify-between gap-4 relative z-10">
+                <div>
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-ember rounded-xl flex items-center justify-center flex-shrink-0"
+                         style="box-shadow:0 6px 20px rgba(232,83,26,0.4)">
+                      <i class="fas fa-building text-white text-lg"></i>
+                    </div>
+                    <div>
+                      <p class="text-ember font-bold font-poppins text-sm">Current Role</p>
+                      <p class="text-white/40 text-xs font-poppins">Full-Time Position</p>
+                    </div>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white font-sora mb-1">Head of Web Development</h3>
+                  <p class="text-ember font-semibold font-poppins text-lg">Growistan</p>
+                </div>
+                <div class="flex flex-col items-end gap-2">
+                  <span class="inline-flex items-center gap-1.5 bg-ember/20 text-ember border border-ember/40 text-xs font-bold px-4 py-2 rounded-full font-poppins">
+                    <span class="w-1.5 h-1.5 bg-ember rounded-full animate-pulse"></span> 1+ Year Active
+                  </span>
+                  <span class="text-white/40 text-sm font-poppins">2024 — Present</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-6 lg:p-8">
+              <p class="text-pebble font-poppins leading-relaxed mb-6 text-sm">
+                Leading the entire web development department at Growistan — a fast-growing digital agency. Responsible for architecting technical solutions, managing developer teams, overseeing client projects from planning to deployment, and implementing SEO-first development standards across all projects.
+              </p>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div class="flex items-center gap-2 text-sm text-pebble font-poppins"><i class="fas fa-check text-ember text-xs flex-shrink-0"></i>Team Leadership & Mentoring</div>
+                <div class="flex items-center gap-2 text-sm text-pebble font-poppins"><i class="fas fa-check text-ember text-xs flex-shrink-0"></i>WordPress Architecture</div>
+                <div class="flex items-center gap-2 text-sm text-pebble font-poppins"><i class="fas fa-check text-ember text-xs flex-shrink-0"></i>n8n Workflow Automation</div>
+                <div class="flex items-center gap-2 text-sm text-pebble font-poppins"><i class="fas fa-check text-ember text-xs flex-shrink-0"></i>Client Project Management</div>
+                <div class="flex items-center gap-2 text-sm text-pebble font-poppins"><i class="fas fa-check text-ember text-xs flex-shrink-0"></i>Performance Optimization</div>
+                <div class="flex items-center gap-2 text-sm text-pebble font-poppins"><i class="fas fa-check text-ember text-xs flex-shrink-0"></i>Technical SEO Strategy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Timeline 2x2 Grid -->
+        <div class="grid sm:grid-cols-2 gap-6">
+  
+          <!-- Entry 1 -->
+          <div class="reveal bg-white rounded-2xl border border-stone/60 p-6 hover:border-ember hover:shadow-card transition-all duration-300">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-2.5 h-2.5 bg-ember rounded-full flex-shrink-0" style="box-shadow:0 0 0 4px rgba(232,83,26,0.15)"></div>
+              <span class="text-xs font-semibold text-pebble font-poppins bg-stone/30 border border-stone/60 px-3 py-1 rounded-full">Early 2024</span>
+            </div>
+            <h4 class="font-bold text-ink font-sora mb-1">Web Development Foundations</h4>
+            <p class="text-ember text-xs font-semibold font-poppins mb-3">HTML, CSS, JavaScript Mastery</p>
+            <p class="text-pebble text-sm font-poppins leading-relaxed">Started with core web technologies, building a strong foundation in semantic HTML, responsive CSS, and vanilla JavaScript. Built first production websites.</p>
+          </div>
+  
+          <!-- Entry 2 -->
+          <div class="reveal bg-white rounded-2xl border border-stone/60 p-6 hover:border-ember hover:shadow-card transition-all duration-300" style="transition-delay:0.1s">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-2.5 h-2.5 bg-ember rounded-full flex-shrink-0" style="box-shadow:0 0 0 4px rgba(232,83,26,0.15)"></div>
+              <span class="text-xs font-semibold text-ember font-poppins bg-ember/10 border border-ember/30 px-3 py-1 rounded-full">Mid 2024</span>
+            </div>
+            <h4 class="font-bold text-ink font-sora mb-1">SEO & WordPress Expertise</h4>
+            <p class="text-ember text-xs font-semibold font-poppins mb-3">Performance & Ranking Mastery</p>
+            <p class="text-pebble text-sm font-poppins leading-relaxed">Deep-dived into WordPress internals, PHP, SEO optimization, and performance tuning. Delivered first 20+ client projects with 5-star ratings.</p>
+          </div>
+  
+          <!-- Entry 3 -->
+          <div class="reveal bg-white rounded-2xl border border-stone/60 p-6 hover:border-ember hover:shadow-card transition-all duration-300" style="transition-delay:0.2s">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-2.5 h-2.5 bg-green-500 rounded-full flex-shrink-0" style="box-shadow:0 0 0 4px rgba(34,197,94,0.15)"></div>
+              <span class="text-xs font-semibold text-green-700 font-poppins bg-green-100 border border-green-200 px-3 py-1 rounded-full">Early 2025</span>
+            </div>
+            <h4 class="font-bold text-ink font-sora mb-1">Full Stack Expansion</h4>
+            <p class="text-ember text-xs font-semibold font-poppins mb-3">React, Node.js, TypeScript & n8n</p>
+            <p class="text-pebble text-sm font-poppins leading-relaxed">Expanded to React, Node.js, TypeScript. Became one of Pakistan's first n8n automation specialists, delivering 25+ automation projects alongside Python scraping.</p>
+          </div>
+  
+          <!-- Entry 4 -->
+          <div class="reveal bg-white rounded-2xl border border-stone/60 p-6 hover:border-ember hover:shadow-card transition-all duration-300" style="transition-delay:0.3s">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-2.5 h-2.5 bg-ember rounded-full flex-shrink-0" style="box-shadow:0 0 0 4px rgba(232,83,26,0.15)"></div>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-ember font-poppins bg-ember/10 border border-ember/30 px-3 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 bg-ember rounded-full animate-pulse"></span> Present
+              </span>
+            </div>
+            <h4 class="font-bold text-ink font-sora mb-1">Freelance Growth & Scale</h4>
+            <p class="text-ember text-xs font-semibold font-poppins mb-3">International Client Collaborations</p>
+            <p class="text-pebble text-sm font-poppins leading-relaxed">Leading Growistan's dev team, serving international clients, and actively taking freelance projects. Delivered 3 live Figma UI/UX design projects alongside development work.</p>
+          </div>
+  
+        </div>
+        <!-- end 2x2 grid -->
+  
+      </div>
+    </div>
+  </section>
+
+<!-- SKILLS -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="text-center mb-14 reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Technical Expertise</p>
+      <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">My Technical Stack</h2>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="reveal bg-cream rounded-3xl p-7 border border-stone/60">
+        <div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-charcoal rounded-xl flex items-center justify-center"><i class="fas fa-desktop text-ember text-sm"></i></div><h3 class="font-bold text-ink font-sora">Frontend</h3></div>
+        <div class="space-y-4">
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-html5 text-orange-500 mr-1.5"></i>HTML5</span><span class="text-sm text-pebble font-poppins">100%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="100"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-css3-alt text-blue-500 mr-1.5"></i>CSS3 / Tailwind</span><span class="text-sm text-pebble font-poppins">95%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="95"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-js text-yellow-500 mr-1.5"></i>JavaScript</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="90"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-react text-cyan-500 mr-1.5"></i>React.js</span><span class="text-sm text-pebble font-poppins">85%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="85"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-code text-blue-600 mr-1.5"></i>TypeScript</span><span class="text-sm text-pebble font-poppins">80%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="80"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-bootstrap text-purple-500 mr-1.5"></i>Bootstrap</span><span class="text-sm text-pebble font-poppins">92%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-ember to-ember-lt rounded-full" data-width="92"></div></div></div>
+        </div>
+      </div>
+      <div class="reveal bg-cream rounded-3xl p-7 border border-stone/60" style="transition-delay:.15s">
+        <div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-ember rounded-xl flex items-center justify-center"><i class="fas fa-server text-white text-sm"></i></div><h3 class="font-bold text-ink font-sora">Backend & WordPress</h3></div>
+        <div class="space-y-4">
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-wordpress text-blue-500 mr-1.5"></i>WordPress</span><span class="text-sm text-pebble font-poppins">98%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="98"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-php text-indigo-500 mr-1.5"></i>PHP</span><span class="text-sm text-pebble font-poppins">85%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="85"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-node-js text-green-500 mr-1.5"></i>Node.js</span><span class="text-sm text-pebble font-poppins">80%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="80"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-database text-orange-500 mr-1.5"></i>MySQL</span><span class="text-sm text-pebble font-poppins">88%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="88"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-python text-blue-400 mr-1.5"></i>Python (Scraping)</span><span class="text-sm text-pebble font-poppins">75%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="75"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-git-alt text-red-500 mr-1.5"></i>Git & GitHub</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-charcoal rounded-full" data-width="90"></div></div></div>
+        </div>
+      </div>
+      <div class="reveal bg-cream rounded-3xl p-7 border border-stone/60" style="transition-delay:.3s">
+        <div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-warm-gray rounded-xl flex items-center justify-center"><i class="fas fa-bolt text-ember text-sm"></i></div><h3 class="font-bold text-ink font-sora">Automation & Design</h3></div>
+        <div class="space-y-4">
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-bolt text-green-500 mr-1.5"></i>n8n Automation</span><span class="text-sm text-pebble font-poppins">95%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="95"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-tachometer-alt text-red-500 mr-1.5"></i>Speed Optimization</span><span class="text-sm text-pebble font-poppins">95%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="95"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-search text-purple-500 mr-1.5"></i>Technical SEO</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="90"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-figma text-pink-500 mr-1.5"></i>Figma (3 live projects)</span><span class="text-sm text-pebble font-poppins">82%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="82"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fab fa-woocommerce text-purple-600 mr-1.5"></i>WooCommerce</span><span class="text-sm text-pebble font-poppins">90%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="90"></div></div></div>
+          <div class="skill-item"><div class="flex justify-between mb-1.5"><span class="text-sm font-semibold text-ink font-sora"><i class="fas fa-palette text-teal-500 mr-1.5"></i>Canva & Design Tools</span><span class="text-sm text-pebble font-poppins">88%</span></div><div class="h-2 bg-stone/40 rounded-full overflow-hidden"><div class="skill-bar-fill h-full bg-gradient-to-r from-warm-gray to-charcoal rounded-full" data-width="88"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="text-center mb-14 reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">My Toolkit</p>
+      <h2 class="section-title text-3xl font-extrabold text-ink font-sora mx-auto">Tools I Use Daily</h2>
+    </div>
+    <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-4">
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default"><i class="fab fa-wordpress text-3xl text-blue-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">WordPress</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.05s"><i class="fab fa-react text-3xl text-cyan-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">React</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.1s"><i class="fab fa-node-js text-3xl text-green-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Node.js</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.15s"><i class="fab fa-figma text-3xl text-pink-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Figma</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.2s"><i class="fab fa-github text-3xl text-ink"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">GitHub</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.25s"><i class="fab fa-python text-3xl text-blue-400"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Python</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.3s"><i class="fab fa-bootstrap text-3xl text-purple-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Bootstrap</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.35s"><i class="fas fa-bolt text-3xl text-green-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">n8n</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.4s"><i class="fas fa-tachometer-alt text-3xl text-red-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">WP Rocket</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.45s"><i class="fab fa-git-alt text-3xl text-orange-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Git</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.5s"><i class="fas fa-palette text-3xl text-teal-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Canva</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.55s"><i class="fab fa-woocommerce text-3xl text-purple-600"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">WooCommerce</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.6s"><i class="fas fa-code text-3xl text-blue-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">VS Code</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.65s"><i class="fas fa-database text-3xl text-orange-400"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">MySQL</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.7s"><i class="fab fa-docker text-3xl text-blue-600"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Docker</span></div>
+      <div class="reveal bg-white rounded-2xl border border-stone/60 p-4 flex flex-col items-center gap-2 hover:border-ember transition-colors duration-300 cursor-default" style="transition-delay:.75s"><i class="fab fa-google text-3xl text-yellow-500"></i><span class="text-xs font-semibold text-pebble font-poppins text-center">Google Colab</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="text-center mb-14 reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Why Work With Me</p>
+      <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">Why I'm the Right Developer for Your Project</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7"><div class="w-12 h-12 bg-ember/10 rounded-2xl flex items-center justify-center mb-4"><i class="fas fa-rocket text-ember text-xl"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2">Speed & SEO First</h3><p class="text-pebble text-sm font-poppins leading-relaxed">Sites that load under 2 seconds, score 90+ on PageSpeed Insights, and rank on Google from day one.</p></div>
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.1s"><div class="w-12 h-12 bg-charcoal rounded-2xl flex items-center justify-center mb-4"><i class="fas fa-brain text-ember text-xl"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2">Business Mindset</h3><p class="text-pebble text-sm font-poppins leading-relaxed">At 21, I've published 500+ blogs, built automation systems, and studied how digital businesses scale.</p></div>
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.2s"><div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mb-4"><i class="fas fa-bolt text-green-600 text-xl"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2">Automation Advantage</h3><p class="text-pebble text-sm font-poppins leading-relaxed">With n8n expertise, I automate parts of your business you didn't know could be automated.</p></div>
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.3s"><div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-4"><i class="fas fa-code-branch text-blue-500 text-xl"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2">Full Stack Thinking</h3><p class="text-pebble text-sm font-poppins leading-relaxed">Not just themes — I go into PHP, SQL, plugin architecture, and performance hooks.</p></div>
+      <div class="reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.4s"><div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-4"><i class="fas fa-seedling text-purple-500 text-xl"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2">Always Evolving</h3><p class="text-pebble text-sm font-poppins leading-relaxed">Being 21 means I actively follow latest WordPress updates, SEO changes, and development trends.</p></div>
+      <div class="reveal bg-charcoal rounded-3xl p-7" style="transition-delay:.5s"><div class="w-12 h-12 bg-ember/20 rounded-2xl flex items-center justify-center mb-4"><i class="fas fa-comments text-ember text-xl"></i></div><h3 class="font-bold text-white font-sora text-lg mb-2">Clear Communication</h3><p class="text-white/60 text-sm font-poppins leading-relaxed">Transparent updates throughout. Clients who work with me once — always come back.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bg-charcoal pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Col 1: Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+            <span class="font-sora font-black text-white text-base">H</span>
+          </div>
+          <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+        </div>
+        <p class="text-white/50 font-poppins text-sm leading-relaxed mb-5">Pakistan's youngest performance-driven WordPress & full-stack developer. Building digital experiences that rank, convert, and scale.</p>
+        <div class="flex gap-2.5">
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-linkedin-in text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-github text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-whatsapp text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-upwork text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Pages -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Home</a></li>
+          <li><a href="about.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>About Me</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Services</a></li>
+          <li><a href="projects.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Projects</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>WordPress Dev</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>React Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>n8n Automation</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Speed Optimization</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>SEO Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Contact</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-ember text-xs"></i></div>
+            <p class="text-white/50 text-sm font-poppins">Sargodha, Punjab, Pakistan</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-envelope text-ember text-xs"></i></div>
+            <a href="mailto:hanzala5c9@gmail.com" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">hanzala5c9@gmail.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone text-ember text-xs"></i></div>
+            <a href="tel:+923249473885" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">+92 324 9473885</a>
+          </div>
+          <div class="mt-4 inline-flex items-center gap-2 bg-ember/20 border border-ember/30 rounded-full px-4 py-2">
+            <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+            <span class="text-ember text-xs font-poppins font-semibold">Available for Projects</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-white/40 text-xs font-poppins">© 2025 Muhammad Hanzala. All Rights Reserved.</p>
+      <p class="text-ember/50 text-xs font-poppins">Best WordPress Developer in Pakistan</p>
+    </div>
+  </div>
+</footer>
+<script>
+  // Sticky nav
+  window.addEventListener('scroll',()=>{
+    const n=document.getElementById('navbar');
+    n&&(window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled'));
+  });
+  // Mobile menu
+  const mt=document.getElementById('menu-toggle');
+  if(mt){
+    mt.addEventListener('click',()=>{
+      const m=document.getElementById('mobile-menu');
+      const ic=document.getElementById('menu-icon');
+      m.classList.toggle('open');
+      ic.classList.toggle('fa-bars');
+      ic.classList.toggle('fa-times');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('menu-icon').classList.replace('fa-times','fa-bars');
+    }));
+  }
+  // Reveal
+  const ro=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+  // Counters
+  const co=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target,t=+el.dataset.target,inc=t/60;
+        let c=0;
+        const ti=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t+'+';clearInterval(ti);}else el.textContent=Math.floor(c);},25);
+        co.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+  // Skill bars
+  const so=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.style.width=b.dataset.width+'%');so.unobserve(e.target);}});
+  },{threshold:.2});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>so.observe(el));
+  // FAQ
+  document.querySelectorAll('.faq-trigger').forEach(tr=>{
+    tr.addEventListener('click',()=>{
+      const item=tr.closest('.faq-item'),ans=item.querySelector('.faq-answer'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').classList.remove('open');});
+      if(!open){item.classList.add('open');ans.classList.add('open');}
+    });
+  });
+  // Project filter
+  document.querySelectorAll('.filter-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-tab').forEach(t=>{t.classList.remove('bg-charcoal','text-white');t.classList.add('bg-white','text-ink','border','border-stone');});
+      tab.classList.add('bg-charcoal','text-white');tab.classList.remove('bg-white','text-ink','border','border-stone');
+      const f=tab.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(c=>{c.style.display=(f==='all'||c.dataset.category===f)?'block':'none';});
+    });
+  });
+  // Contact form
+  const cf=document.getElementById('contact-form');
+  if(cf){cf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=cf.querySelector('button[type="submit"]');
+    btn.innerHTML='<i class="fas fa-check mr-2"></i>Message Sent! Ill reply within 24 hours.';
+    btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane mr-2"></i>Send Message';btn.style.background='';cf.reset();},3000);
+  });}
+  // Typing
+  const typedEl=document.getElementById('typed');
+  if(typedEl){
+    const texts=["Best WordPress Developer in Pakistan","Full Stack Developer (React + Node.js)","n8n Automation Specialist","Performance & SEO Expert","Head of Web Dev @ Growistan"];
+    let ti=0,ci=0,del=false;
+    function type(){
+      const cur=texts[ti];
+      typedEl.textContent=del?cur.substring(0,ci--):cur.substring(0,ci++);
+      let d=del?40:80;
+      if(!del&&ci===cur.length+1){d=2000;del=true;}
+      else if(del&&ci===0){del=false;ti=(ti+1)%texts.length;d=400;}
+      setTimeout(type,d);
+    }
+    type();
+  }
+</script></body></html>

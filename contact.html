@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammad Hanzala — Best WordPress Developer in Pakistan"/>
+  <title>Contact — Hire Muhammad Hanzala | Muhammad Hanzala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          charcoal: '#1A1A1A', 'warm-gray': '#2C2C2C',
+          ember: '#E8531A', 'ember-lt': '#FF7A45',
+          cream: '#FAF7F2', stone: '#C4B9A8',
+          ink: '#1C1917', pebble: '#78716C',
+        },
+        fontFamily: { sora:['Sora','sans-serif'], poppins:['Poppins','sans-serif'] },
+        boxShadow: {
+          card: '0px 6px 24px rgba(26,26,26,0.10)',
+          'card-hover': '0px 12px 36px rgba(26,26,26,0.18)',
+        }
+      }}
+    }
+</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;}
+    body{font-family:'Poppins',sans-serif;color:#1C1917;background:#FAF7F2;overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Sora',sans-serif;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#FAF7F2;}
+    ::-webkit-scrollbar-thumb{background:#E8531A;border-radius:3px;}
+    #navbar{transition:all .35s ease;}
+    #navbar.scrolled{background:rgba(26,26,26,.97);backdrop-filter:blur(14px);box-shadow:0 4px 30px rgba(0,0,0,.25);}
+    .nav-link{position:relative;transition:color .3s;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#E8531A;transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .hero-bg{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 50%,#1A1A1A 100%);position:relative;overflow:hidden;}
+    .hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.12) 0%,transparent 70%);top:-100px;right:-100px;animation:pulse-glow 4s ease-in-out infinite;}
+    @keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+    .float-badge{animation:float 3s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .section-title{position:relative;display:inline-block;}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:55px;height:4px;background:linear-gradient(90deg,#E8531A,#FF7A45);border-radius:2px;}
+    .btn-ember{background:linear-gradient(135deg,#E8531A,#FF7A45);color:#fff;font-weight:700;transition:transform .3s ease;}
+    .btn-ember:hover{transform:translateY(-3px);}
+    .btn-outline-w{border:2px solid #fff;color:#fff;transition:all .3s ease;font-weight:700;}
+    .btn-outline-w:hover{background:#fff;color:#1A1A1A;transform:translateY(-3px);}
+    .btn-outline-d{border:2px solid #1A1A1A;color:#1A1A1A;transition:all .3s ease;font-weight:700;}
+    .btn-outline-d:hover{background:#1A1A1A;color:#fff;transform:translateY(-3px);}
+    .skill-bar-fill{width:0;transition:width 1.4s cubic-bezier(.25,.46,.45,.94);}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-right.visible{opacity:1;transform:translateX(0);}
+    .gradient-text{background:linear-gradient(135deg,#E8531A,#FF7A45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px;}
+    .noise::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    .typing-cursor{border-right:3px solid #E8531A;animation:blink .8s infinite;padding-right:2px;}
+    @keyframes blink{0%,100%{border-color:#E8531A}50%{border-color:transparent}}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    #mobile-menu.open{max-height:600px;}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:300px;}
+    .faq-icon{transition:transform .35s ease;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .project-overlay{opacity:0;transition:opacity .3s ease;}
+    .project-card:hover .project-overlay{opacity:1;}
+    .project-img{transition:transform .5s ease;}
+    .project-card:hover .project-img{transform:scale(1.06);}
+    .service-card{transition:transform .3s ease,box-shadow .3s ease;}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0px 12px 36px rgba(26,26,26,.18);}
+    .page-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 100%);padding:100px 0 60px;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.1) 0%,transparent 70%);}
+</style>
+</head>
+<body class="antialiased">
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+          <span class="font-sora font-black text-white text-base">H</span>
+        </div>
+        <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">About</a>
+        <a href="services.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Services</a>
+        <a href="projects.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Projects</a>
+        <a href="contact.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember active">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden lg:inline-flex btn-ember px-5 py-2 rounded-full text-sm">
+          Hire Me <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+        <button id="menu-toggle" class="lg:hidden text-white text-xl p-2">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-5 py-3 flex flex-col">
+      <a href="index.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Home</a>
+      <a href="about.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">About</a>
+      <a href="services.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Services</a>
+      <a href="projects.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Projects</a>
+      <a href="contact.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Contact</a>
+      <a href="contact.html" class="btn-ember mt-3 px-5 py-3 rounded-full text-sm text-center">Hire Me Now</a>
+    </div>
+  </div>
+</header>
+<main class="pt-[68px]">
+<section class="page-hero">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 relative z-10">
+    <div class="reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Let's Talk</p>
+      <h1 class="font-sora text-4xl lg:text-5xl font-extrabold text-white mb-4">Get In <span class="gradient-text">Touch</span></h1>
+      <p class="text-white/60 font-poppins max-w-xl">Have a project in mind? I respond to every serious inquiry within 24 hours. Let's build something amazing together.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid lg:grid-cols-5 gap-10">
+      <!-- Info -->
+      <div class="lg:col-span-2 reveal-left space-y-4">
+        <div class="flex items-center gap-4 bg-cream rounded-2xl p-5 border border-stone/60">
+          <div class="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-ember"></i></div>
+          <div><p class="text-xs text-pebble font-poppins mb-0.5">Location</p><p class="font-semibold text-ink font-sora">Sargodha, Punjab, Pakistan</p></div>
+        </div>
+        <div class="flex items-center gap-4 bg-cream rounded-2xl p-5 border border-stone/60">
+          <div class="w-12 h-12 bg-ember rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-white"></i></div>
+          <div><p class="text-xs text-pebble font-poppins mb-0.5">Email</p><a href="mailto:hanzala5c9@gmail.com" class="font-semibold text-ink font-sora hover:text-ember transition-colors">hanzala5c9@gmail.com</a></div>
+        </div>
+        <div class="flex items-center gap-4 bg-cream rounded-2xl p-5 border border-stone/60">
+          <div class="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center flex-shrink-0"><i class="fas fa-phone text-ember"></i></div>
+          <div><p class="text-xs text-pebble font-poppins mb-0.5">Phone / WhatsApp</p><a href="tel:+923249473885" class="font-semibold text-ink font-sora hover:text-ember transition-colors">+92 324 9473885</a></div>
+        </div>
+        <div class="bg-charcoal rounded-2xl p-5">
+          <p class="text-white/50 text-xs font-poppins mb-4 uppercase tracking-wider">Connect on social</p>
+          <div class="flex gap-2.5">
+            <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-linkedin-in text-sm"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-github text-sm"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-whatsapp text-sm"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-ember hover:border-ember transition-all duration-300"><i class="fab fa-upwork text-sm"></i></a>
+          </div>
+        </div>
+        <div class="bg-cream rounded-2xl p-5 border border-stone/60">
+          <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 bg-ember rounded-lg flex items-center justify-center"><i class="fas fa-building text-white text-sm"></i></div><div><p class="text-xs text-pebble font-poppins">Current Role</p><p class="font-semibold text-ink text-sm font-sora">Head of Web Dev @ Growistan</p></div></div>
+          <p class="text-pebble text-xs font-poppins">Leading full dev team · 1+ year · Open to freelance</p>
+        </div>
+      </div>
+      <!-- Form -->
+      <div class="lg:col-span-3 reveal-right">
+        <form id="contact-form" class="bg-cream rounded-3xl p-7 border border-stone/60">
+          <h3 class="font-bold text-ink font-sora text-xl mb-6">Tell Me About Your Project</h3>
+          <div class="grid sm:grid-cols-2 gap-5 mb-5">
+            <div><label class="block text-sm font-semibold text-ink font-sora mb-2">Your Name</label><input type="text" placeholder="Muhammad Ali" required class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink placeholder-pebble/60 focus:outline-none focus:border-ember transition-colors"/></div>
+            <div><label class="block text-sm font-semibold text-ink font-sora mb-2">Email Address</label><input type="email" placeholder="your@email.com" required class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink placeholder-pebble/60 focus:outline-none focus:border-ember transition-colors"/></div>
+          </div>
+          <div class="mb-5"><label class="block text-sm font-semibold text-ink font-sora mb-2">Project Type</label><select class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink focus:outline-none focus:border-ember transition-colors appearance-none"><option value="">Select a service...</option><option>Custom WordPress Development</option><option>Front-End Development (React/JS)</option><option>n8n Automation & Workflows</option><option>Performance Optimization</option><option>SEO-Optimized Development</option><option>UI/UX Design (Figma)</option><option>Other</option></select></div>
+          <div class="mb-5"><label class="block text-sm font-semibold text-ink font-sora mb-2">Project Budget</label><select class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink focus:outline-none focus:border-ember transition-colors appearance-none"><option value="">Select budget range...</option><option>Under $300</option><option>$300 – $800</option><option>$800 – $2,000</option><option>$2,000+</option></select></div>
+          <div class="mb-6"><label class="block text-sm font-semibold text-ink font-sora mb-2">Message</label><textarea rows="4" placeholder="Describe your project goals, timeline, and any specific requirements..." class="w-full px-4 py-3 bg-white border border-stone/60 rounded-xl text-sm font-poppins text-ink placeholder-pebble/60 focus:outline-none focus:border-ember transition-colors resize-none"></textarea></div>
+          <button type="submit" class="btn-ember w-full py-4 rounded-2xl text-base flex items-center justify-center gap-3 font-sora font-bold"><i class="fas fa-paper-plane"></i>Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bg-charcoal pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Col 1: Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+            <span class="font-sora font-black text-white text-base">H</span>
+          </div>
+          <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+        </div>
+        <p class="text-white/50 font-poppins text-sm leading-relaxed mb-5">Pakistan's youngest performance-driven WordPress & full-stack developer. Building digital experiences that rank, convert, and scale.</p>
+        <div class="flex gap-2.5">
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-linkedin-in text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-github text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-whatsapp text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-upwork text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Pages -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Home</a></li>
+          <li><a href="about.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>About Me</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Services</a></li>
+          <li><a href="projects.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Projects</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>WordPress Dev</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>React Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>n8n Automation</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Speed Optimization</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>SEO Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Contact</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-ember text-xs"></i></div>
+            <p class="text-white/50 text-sm font-poppins">Sargodha, Punjab, Pakistan</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-envelope text-ember text-xs"></i></div>
+            <a href="mailto:hanzala5c9@gmail.com" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">hanzala5c9@gmail.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone text-ember text-xs"></i></div>
+            <a href="tel:+923249473885" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">+92 324 9473885</a>
+          </div>
+          <div class="mt-4 inline-flex items-center gap-2 bg-ember/20 border border-ember/30 rounded-full px-4 py-2">
+            <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+            <span class="text-ember text-xs font-poppins font-semibold">Available for Projects</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-white/40 text-xs font-poppins">© 2025 Muhammad Hanzala. All Rights Reserved.</p>
+      <p class="text-ember/50 text-xs font-poppins">Best WordPress Developer in Pakistan</p>
+    </div>
+  </div>
+</footer>
+<script>
+  // Sticky nav
+  window.addEventListener('scroll',()=>{
+    const n=document.getElementById('navbar');
+    n&&(window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled'));
+  });
+  // Mobile menu
+  const mt=document.getElementById('menu-toggle');
+  if(mt){
+    mt.addEventListener('click',()=>{
+      const m=document.getElementById('mobile-menu');
+      const ic=document.getElementById('menu-icon');
+      m.classList.toggle('open');
+      ic.classList.toggle('fa-bars');
+      ic.classList.toggle('fa-times');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('menu-icon').classList.replace('fa-times','fa-bars');
+    }));
+  }
+  // Reveal
+  const ro=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+  // Counters
+  const co=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target,t=+el.dataset.target,inc=t/60;
+        let c=0;
+        const ti=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t+'+';clearInterval(ti);}else el.textContent=Math.floor(c);},25);
+        co.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+  // Skill bars
+  const so=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.style.width=b.dataset.width+'%');so.unobserve(e.target);}});
+  },{threshold:.2});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>so.observe(el));
+  // FAQ
+  document.querySelectorAll('.faq-trigger').forEach(tr=>{
+    tr.addEventListener('click',()=>{
+      const item=tr.closest('.faq-item'),ans=item.querySelector('.faq-answer'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').classList.remove('open');});
+      if(!open){item.classList.add('open');ans.classList.add('open');}
+    });
+  });
+  // Project filter
+  document.querySelectorAll('.filter-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-tab').forEach(t=>{t.classList.remove('bg-charcoal','text-white');t.classList.add('bg-white','text-ink','border','border-stone');});
+      tab.classList.add('bg-charcoal','text-white');tab.classList.remove('bg-white','text-ink','border','border-stone');
+      const f=tab.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(c=>{c.style.display=(f==='all'||c.dataset.category===f)?'block':'none';});
+    });
+  });
+  // Contact form
+  const cf=document.getElementById('contact-form');
+  if(cf){cf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=cf.querySelector('button[type="submit"]');
+    btn.innerHTML='<i class="fas fa-check mr-2"></i>Message Sent! Ill reply within 24 hours.';
+    btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane mr-2"></i>Send Message';btn.style.background='';cf.reset();},3000);
+  });}
+  // Typing
+  const typedEl=document.getElementById('typed');
+  if(typedEl){
+    const texts=["Best WordPress Developer in Pakistan","Full Stack Developer (React + Node.js)","n8n Automation Specialist","Performance & SEO Expert","Head of Web Dev @ Growistan"];
+    let ti=0,ci=0,del=false;
+    function type(){
+      const cur=texts[ti];
+      typedEl.textContent=del?cur.substring(0,ci--):cur.substring(0,ci++);
+      let d=del?40:80;
+      if(!del&&ci===cur.length+1){d=2000;del=true;}
+      else if(del&&ci===0){del=false;ti=(ti+1)%texts.length;d=400;}
+      setTimeout(type,d);
+    }
+    type();
+  }
+</script></body></html>

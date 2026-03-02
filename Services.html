@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammad Hanzala — Best WordPress Developer in Pakistan"/>
+  <title>Services — Web Development Pakistan | Muhammad Hanzala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          charcoal: '#1A1A1A', 'warm-gray': '#2C2C2C',
+          ember: '#E8531A', 'ember-lt': '#FF7A45',
+          cream: '#FAF7F2', stone: '#C4B9A8',
+          ink: '#1C1917', pebble: '#78716C',
+        },
+        fontFamily: { sora:['Sora','sans-serif'], poppins:['Poppins','sans-serif'] },
+        boxShadow: {
+          card: '0px 6px 24px rgba(26,26,26,0.10)',
+          'card-hover': '0px 12px 36px rgba(26,26,26,0.18)',
+        }
+      }}
+    }
+</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;}
+    body{font-family:'Poppins',sans-serif;color:#1C1917;background:#FAF7F2;overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Sora',sans-serif;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#FAF7F2;}
+    ::-webkit-scrollbar-thumb{background:#E8531A;border-radius:3px;}
+    #navbar{transition:all .35s ease;}
+    #navbar.scrolled{background:rgba(26,26,26,.97);backdrop-filter:blur(14px);box-shadow:0 4px 30px rgba(0,0,0,.25);}
+    .nav-link{position:relative;transition:color .3s;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#E8531A;transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .hero-bg{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 50%,#1A1A1A 100%);position:relative;overflow:hidden;}
+    .hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.12) 0%,transparent 70%);top:-100px;right:-100px;animation:pulse-glow 4s ease-in-out infinite;}
+    @keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+    .float-badge{animation:float 3s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .section-title{position:relative;display:inline-block;}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:55px;height:4px;background:linear-gradient(90deg,#E8531A,#FF7A45);border-radius:2px;}
+    .btn-ember{background:linear-gradient(135deg,#E8531A,#FF7A45);color:#fff;font-weight:700;transition:transform .3s ease;}
+    .btn-ember:hover{transform:translateY(-3px);}
+    .btn-outline-w{border:2px solid #fff;color:#fff;transition:all .3s ease;font-weight:700;}
+    .btn-outline-w:hover{background:#fff;color:#1A1A1A;transform:translateY(-3px);}
+    .btn-outline-d{border:2px solid #1A1A1A;color:#1A1A1A;transition:all .3s ease;font-weight:700;}
+    .btn-outline-d:hover{background:#1A1A1A;color:#fff;transform:translateY(-3px);}
+    .skill-bar-fill{width:0;transition:width 1.4s cubic-bezier(.25,.46,.45,.94);}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-right.visible{opacity:1;transform:translateX(0);}
+    .gradient-text{background:linear-gradient(135deg,#E8531A,#FF7A45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px;}
+    .noise::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    .typing-cursor{border-right:3px solid #E8531A;animation:blink .8s infinite;padding-right:2px;}
+    @keyframes blink{0%,100%{border-color:#E8531A}50%{border-color:transparent}}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    #mobile-menu.open{max-height:600px;}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:300px;}
+    .faq-icon{transition:transform .35s ease;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .project-overlay{opacity:0;transition:opacity .3s ease;}
+    .project-card:hover .project-overlay{opacity:1;}
+    .project-img{transition:transform .5s ease;}
+    .project-card:hover .project-img{transform:scale(1.06);}
+    .service-card{transition:transform .3s ease,box-shadow .3s ease;}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0px 12px 36px rgba(26,26,26,.18);}
+    .page-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 100%);padding:100px 0 60px;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.1) 0%,transparent 70%);}
+</style>
+</head>
+<body class="antialiased">
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+          <span class="font-sora font-black text-white text-base">H</span>
+        </div>
+        <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">About</a>
+        <a href="services.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember active">Services</a>
+        <a href="projects.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Projects</a>
+        <a href="contact.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden lg:inline-flex btn-ember px-5 py-2 rounded-full text-sm">
+          Hire Me <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+        <button id="menu-toggle" class="lg:hidden text-white text-xl p-2">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-5 py-3 flex flex-col">
+      <a href="index.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Home</a>
+      <a href="about.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">About</a>
+      <a href="services.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Services</a>
+      <a href="projects.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Projects</a>
+      <a href="contact.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Contact</a>
+      <a href="contact.html" class="btn-ember mt-3 px-5 py-3 rounded-full text-sm text-center">Hire Me Now</a>
+    </div>
+  </div>
+</header>
+<main class="pt-[68px]">
+<section class="page-hero">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 relative z-10">
+    <div class="reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">What I Offer</p>
+      <h1 class="font-sora text-4xl lg:text-5xl font-extrabold text-white mb-4">My <span class="gradient-text">Services</span></h1>
+      <p class="text-white/60 font-poppins max-w-xl">End-to-end web solutions built for speed, SEO, and scale. From custom WordPress builds to React frontends and n8n automation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7">
+        <div class="w-14 h-14 bg-charcoal rounded-2xl flex items-center justify-center mb-5"><i class="fab fa-wordpress text-2xl text-white"></i></div>
+        <h3 class="font-bold text-ink font-sora text-xl mb-3">Custom WordPress Development</h3>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">Custom WordPress sites from scratch — not from cookie-cutter templates. Fast-loading, mobile-responsive, SEO-structured, and built to convert visitors into customers.</p>
+        <ul class="space-y-2 mb-5">
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Custom theme from Figma to WordPress</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>WooCommerce & eCommerce solutions</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Plugin customization & conflict resolution</li>
+        </ul>
+        <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.1s">
+        <div class="w-14 h-14 bg-ember rounded-2xl flex items-center justify-center mb-5"><i class="fab fa-react text-2xl text-white"></i></div>
+        <h3 class="font-bold text-ink font-sora text-xl mb-3">Front-End Development</h3>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">Pixel-perfect, responsive web experiences using HTML, CSS, JavaScript, TypeScript, and React. Clean, semantic code that search engines love and users trust.</p>
+        <ul class="space-y-2 mb-5">
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>React SPAs & web applications</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Tailwind CSS & Bootstrap layouts</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>TypeScript & modern JavaScript</li>
+        </ul>
+        <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.2s">
+        <div class="w-14 h-14 bg-green-600 rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-bolt text-2xl text-white"></i></div>
+        <h3 class="font-bold text-ink font-sora text-xl mb-3">n8n Automation & Workflows</h3>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">One of Pakistan's very few n8n specialists. I help businesses automate repetitive tasks, connect apps, and build powerful workflows that save hours every week.</p>
+        <ul class="space-y-2 mb-5">
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Custom n8n workflow design</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>API integrations (CRMs, e-commerce)</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Python + Google Colab scraping pipelines</li>
+        </ul>
+        <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.3s">
+        <div class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-search text-2xl text-white"></i></div>
+        <h3 class="font-bold text-ink font-sora text-xl mb-3">SEO-Optimized Development</h3>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">A beautiful website nobody finds is worthless. I build with SEO baked in — structured data, Core Web Vitals, and clean architecture that ranks.</p>
+        <ul class="space-y-2 mb-5">
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Technical SEO implementation</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Core Web Vitals (LCP, FID, CLS)</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Schema markup & structured data</li>
+        </ul>
+        <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.4s">
+        <div class="w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center mb-5"><i class="fas fa-tachometer-alt text-2xl text-white"></i></div>
+        <h3 class="font-bold text-ink font-sora text-xl mb-3">Performance Optimization</h3>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">I specialize in making slow websites blazing fast. 90+ PageSpeed scores, WP Rocket setup, CDN configuration, and full image optimization.</p>
+        <ul class="space-y-2 mb-5">
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>WP Rocket & caching setup</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Image optimization (WebP, lazy load)</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Database & query optimization</li>
+        </ul>
+        <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="service-card reveal bg-cream rounded-3xl border border-stone/60 p-7" style="transition-delay:.5s">
+        <div class="w-14 h-14 bg-pink-600 rounded-2xl flex items-center justify-center mb-5"><i class="fab fa-figma text-2xl text-white"></i></div>
+        <h3 class="font-bold text-ink font-sora text-xl mb-3">UI/UX Design (Figma)</h3>
+        <p class="text-pebble font-poppins text-sm leading-relaxed mb-5">Delivered 3 live Figma projects. Clean, conversion-focused UI design bridging the gap between beautiful design and functional development.</p>
+        <ul class="space-y-2 mb-5">
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Wireframing & prototyping</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Design to development handoff</li>
+          <li class="text-xs text-pebble font-poppins flex items-center gap-2"><i class="fas fa-check text-ember text-xs"></i>Component design systems</li>
+        </ul>
+        <a href="contact.html" class="text-ember font-semibold text-sm font-poppins flex items-center gap-1.5 hover:gap-3 transition-all">Get a Quote <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="text-center mb-14 reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">My Process</p>
+      <h2 class="section-title text-3xl lg:text-4xl font-extrabold text-ink font-sora mx-auto">How I Work — Idea to Launch</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">01</div><div class="w-12 h-12 bg-charcoal rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-comments text-ember text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Discovery Call</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Understanding your business goals, target audience, and project requirements before a single line of code is written.</p></div>
+      <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.1s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">02</div><div class="w-12 h-12 bg-ember rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-lightbulb text-white text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Strategy & Planning</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Detailed project roadmap, sitemap, SEO keyword strategy, and technical architecture plan — before design begins.</p></div>
+      <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.2s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">03</div><div class="w-12 h-12 bg-pink-600 rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fab fa-figma text-white text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">UI/UX Design</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">High-fidelity Figma designs with feedback incorporated. Pixel-perfect, conversion-focused interfaces.</p></div>
+      <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.3s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">04</div><div class="w-12 h-12 bg-charcoal rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-code text-ember text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Development</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Clean, semantic, SEO-optimized code. WordPress, React, PHP, Node.js — whichever stack best fits your project.</p></div>
+      <div class="reveal bg-white rounded-3xl border border-stone/60 p-7 relative overflow-hidden" style="transition-delay:.4s"><div class="absolute top-4 right-4 text-6xl font-black text-cream font-sora leading-none select-none">05</div><div class="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-vial text-white text-lg"></i></div><h3 class="font-bold text-ink font-sora text-lg mb-2 relative z-10">Testing & Optimization</h3><p class="text-pebble text-sm font-poppins leading-relaxed relative z-10">Cross-browser testing, performance tuning (90+ PageSpeed), security hardening, and final QA checks.</p></div>
+      <div class="reveal bg-charcoal rounded-3xl p-7 relative overflow-hidden" style="transition-delay:.5s"><div class="absolute top-4 right-4 text-6xl font-black text-warm-gray font-sora leading-none select-none">06</div><div class="w-12 h-12 bg-ember/20 rounded-2xl flex items-center justify-center mb-5 relative z-10"><i class="fas fa-rocket text-ember text-lg"></i></div><h3 class="font-bold text-white font-sora text-lg mb-2 relative z-10">Launch & Support</h3><p class="text-white/60 text-sm font-poppins leading-relaxed relative z-10">Smooth deployment, Google Search Console setup, sitemap submission, and ongoing post-launch support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- n8n SECTION -->
+<section class="py-24 bg-charcoal noise relative overflow-hidden">
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-ember/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal-left">
+        <div class="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/40 rounded-full px-4 py-2 mb-5"><i class="fas fa-bolt text-green-400 text-sm"></i><span class="text-green-400 text-sm font-poppins font-semibold">Pakistan's #1 n8n Specialist</span></div>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-white font-sora mb-5 leading-tight">Automate Your Business with <span class="gradient-text">n8n Workflows</span></h2>
+        <p class="text-white/60 font-poppins leading-relaxed mb-8">As one of the very few developers in Pakistan with deep n8n expertise, I help businesses automate repetitive tasks, connect apps, and build powerful workflows without complex backend code.</p>
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fas fa-share-alt text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">API Integrations</h4><p class="text-white/40 text-xs font-poppins">CRMs, email tools, platforms</p></div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fas fa-file-alt text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">Content Pipelines</h4><p class="text-white/40 text-xs font-poppins">Blog & social automation</p></div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fab fa-python text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">Python Scraping</h4><p class="text-white/40 text-xs font-poppins">Google Colab & sheets</p></div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><i class="fas fa-cogs text-ember text-xl mb-2"></i><h4 class="text-white font-semibold font-sora text-sm mb-1">Business Automation</h4><p class="text-white/40 text-xs font-poppins">Save hours every week</p></div>
+        </div>
+        <a href="contact.html" class="btn-ember px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2"><i class="fas fa-bolt"></i> Get Automation Consultation</a>
+      </div>
+      <div class="reveal-right">
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-7">
+          <div class="flex items-center gap-2 mb-5"><div class="flex gap-1.5"><div class="w-3 h-3 rounded-full bg-red-400"></div><div class="w-3 h-3 rounded-full bg-yellow-400"></div><div class="w-3 h-3 rounded-full bg-green-400"></div></div><span class="text-white/30 text-xs font-poppins">n8n Workflow</span></div>
+          <div class="space-y-3 font-poppins">
+            <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/10"><div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-play text-green-400 text-xs"></i></div><div><p class="text-white text-xs font-semibold">Trigger: New Form Submission</p><p class="text-white/30 text-xs">Webhook / Schedule</p></div></div>
+            <div class="flex justify-center"><div class="w-0.5 h-3 bg-ember/40"></div></div>
+            <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/10"><div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-filter text-blue-400 text-xs"></i></div><div><p class="text-white text-xs font-semibold">Filter & Transform Data</p><p class="text-white/30 text-xs">Conditional Logic</p></div></div>
+            <div class="flex justify-center"><div class="w-0.5 h-3 bg-ember/40"></div></div>
+            <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 border border-white/10"><div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-purple-400 text-xs"></i></div><div><p class="text-white text-xs font-semibold">Send to CRM + Email</p><p class="text-white/30 text-xs">Multi-channel output</p></div></div>
+            <div class="flex justify-center"><div class="w-0.5 h-3 bg-ember/40"></div></div>
+            <div class="flex items-center gap-3 bg-ember/20 rounded-xl p-3 border border-ember/40"><div class="w-8 h-8 bg-ember/30 rounded-lg flex items-center justify-center"><i class="fas fa-check text-ember text-xs"></i></div><div><p class="text-ember text-xs font-semibold">Workflow Complete — Hours Saved!</p><p class="text-ember/50 text-xs">Fully automated</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bg-charcoal pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Col 1: Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+            <span class="font-sora font-black text-white text-base">H</span>
+          </div>
+          <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+        </div>
+        <p class="text-white/50 font-poppins text-sm leading-relaxed mb-5">Pakistan's youngest performance-driven WordPress & full-stack developer. Building digital experiences that rank, convert, and scale.</p>
+        <div class="flex gap-2.5">
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-linkedin-in text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-github text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-whatsapp text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-upwork text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Pages -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Home</a></li>
+          <li><a href="about.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>About Me</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Services</a></li>
+          <li><a href="projects.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Projects</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>WordPress Dev</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>React Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>n8n Automation</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Speed Optimization</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>SEO Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Contact</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-ember text-xs"></i></div>
+            <p class="text-white/50 text-sm font-poppins">Sargodha, Punjab, Pakistan</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-envelope text-ember text-xs"></i></div>
+            <a href="mailto:hanzala5c9@gmail.com" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">hanzala5c9@gmail.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone text-ember text-xs"></i></div>
+            <a href="tel:+923249473885" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">+92 324 9473885</a>
+          </div>
+          <div class="mt-4 inline-flex items-center gap-2 bg-ember/20 border border-ember/30 rounded-full px-4 py-2">
+            <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+            <span class="text-ember text-xs font-poppins font-semibold">Available for Projects</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-white/40 text-xs font-poppins">© 2025 Muhammad Hanzala. All Rights Reserved.</p>
+      <p class="text-ember/50 text-xs font-poppins">Best WordPress Developer in Pakistan</p>
+    </div>
+  </div>
+</footer>
+<script>
+  // Sticky nav
+  window.addEventListener('scroll',()=>{
+    const n=document.getElementById('navbar');
+    n&&(window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled'));
+  });
+  // Mobile menu
+  const mt=document.getElementById('menu-toggle');
+  if(mt){
+    mt.addEventListener('click',()=>{
+      const m=document.getElementById('mobile-menu');
+      const ic=document.getElementById('menu-icon');
+      m.classList.toggle('open');
+      ic.classList.toggle('fa-bars');
+      ic.classList.toggle('fa-times');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('menu-icon').classList.replace('fa-times','fa-bars');
+    }));
+  }
+  // Reveal
+  const ro=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+  // Counters
+  const co=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target,t=+el.dataset.target,inc=t/60;
+        let c=0;
+        const ti=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t+'+';clearInterval(ti);}else el.textContent=Math.floor(c);},25);
+        co.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+  // Skill bars
+  const so=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.style.width=b.dataset.width+'%');so.unobserve(e.target);}});
+  },{threshold:.2});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>so.observe(el));
+  // FAQ
+  document.querySelectorAll('.faq-trigger').forEach(tr=>{
+    tr.addEventListener('click',()=>{
+      const item=tr.closest('.faq-item'),ans=item.querySelector('.faq-answer'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').classList.remove('open');});
+      if(!open){item.classList.add('open');ans.classList.add('open');}
+    });
+  });
+  // Project filter
+  document.querySelectorAll('.filter-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-tab').forEach(t=>{t.classList.remove('bg-charcoal','text-white');t.classList.add('bg-white','text-ink','border','border-stone');});
+      tab.classList.add('bg-charcoal','text-white');tab.classList.remove('bg-white','text-ink','border','border-stone');
+      const f=tab.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(c=>{c.style.display=(f==='all'||c.dataset.category===f)?'block':'none';});
+    });
+  });
+  // Contact form
+  const cf=document.getElementById('contact-form');
+  if(cf){cf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=cf.querySelector('button[type="submit"]');
+    btn.innerHTML='<i class="fas fa-check mr-2"></i>Message Sent! Ill reply within 24 hours.';
+    btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane mr-2"></i>Send Message';btn.style.background='';cf.reset();},3000);
+  });}
+  // Typing
+  const typedEl=document.getElementById('typed');
+  if(typedEl){
+    const texts=["Best WordPress Developer in Pakistan","Full Stack Developer (React + Node.js)","n8n Automation Specialist","Performance & SEO Expert","Head of Web Dev @ Growistan"];
+    let ti=0,ci=0,del=false;
+    function type(){
+      const cur=texts[ti];
+      typedEl.textContent=del?cur.substring(0,ci--):cur.substring(0,ci++);
+      let d=del?40:80;
+      if(!del&&ci===cur.length+1){d=2000;del=true;}
+      else if(del&&ci===0){del=false;ti=(ti+1)%texts.length;d=400;}
+      setTimeout(type,d);
+    }
+    type();
+  }
+</script></body></html>

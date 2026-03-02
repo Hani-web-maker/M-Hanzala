@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammad Hanzala — Best WordPress Developer in Pakistan"/>
+  <title>Projects — Portfolio | Muhammad Hanzala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          charcoal: '#1A1A1A', 'warm-gray': '#2C2C2C',
+          ember: '#E8531A', 'ember-lt': '#FF7A45',
+          cream: '#FAF7F2', stone: '#C4B9A8',
+          ink: '#1C1917', pebble: '#78716C',
+        },
+        fontFamily: { sora:['Sora','sans-serif'], poppins:['Poppins','sans-serif'] },
+        boxShadow: {
+          card: '0px 6px 24px rgba(26,26,26,0.10)',
+          'card-hover': '0px 12px 36px rgba(26,26,26,0.18)',
+        }
+      }}
+    }
+</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;}
+    body{font-family:'Poppins',sans-serif;color:#1C1917;background:#FAF7F2;overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Sora',sans-serif;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#FAF7F2;}
+    ::-webkit-scrollbar-thumb{background:#E8531A;border-radius:3px;}
+    #navbar{transition:all .35s ease;}
+    #navbar.scrolled{background:rgba(26,26,26,.97);backdrop-filter:blur(14px);box-shadow:0 4px 30px rgba(0,0,0,.25);}
+    .nav-link{position:relative;transition:color .3s;}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#E8531A;transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .hero-bg{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 50%,#1A1A1A 100%);position:relative;overflow:hidden;}
+    .hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.12) 0%,transparent 70%);top:-100px;right:-100px;animation:pulse-glow 4s ease-in-out infinite;}
+    @keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+    .float-badge{animation:float 3s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .section-title{position:relative;display:inline-block;}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:55px;height:4px;background:linear-gradient(90deg,#E8531A,#FF7A45);border-radius:2px;}
+    .btn-ember{background:linear-gradient(135deg,#E8531A,#FF7A45);color:#fff;font-weight:700;transition:transform .3s ease;}
+    .btn-ember:hover{transform:translateY(-3px);}
+    .btn-outline-w{border:2px solid #fff;color:#fff;transition:all .3s ease;font-weight:700;}
+    .btn-outline-w:hover{background:#fff;color:#1A1A1A;transform:translateY(-3px);}
+    .btn-outline-d{border:2px solid #1A1A1A;color:#1A1A1A;transition:all .3s ease;font-weight:700;}
+    .btn-outline-d:hover{background:#1A1A1A;color:#fff;transform:translateY(-3px);}
+    .skill-bar-fill{width:0;transition:width 1.4s cubic-bezier(.25,.46,.45,.94);}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal-right.visible{opacity:1;transform:translateX(0);}
+    .gradient-text{background:linear-gradient(135deg,#E8531A,#FF7A45);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .tag{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px;}
+    .noise::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+    .typing-cursor{border-right:3px solid #E8531A;animation:blink .8s infinite;padding-right:2px;}
+    @keyframes blink{0%,100%{border-color:#E8531A}50%{border-color:transparent}}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    #mobile-menu.open{max-height:600px;}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:300px;}
+    .faq-icon{transition:transform .35s ease;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .project-overlay{opacity:0;transition:opacity .3s ease;}
+    .project-card:hover .project-overlay{opacity:1;}
+    .project-img{transition:transform .5s ease;}
+    .project-card:hover .project-img{transform:scale(1.06);}
+    .service-card{transition:transform .3s ease,box-shadow .3s ease;}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0px 12px 36px rgba(26,26,26,.18);}
+    .page-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2C2C2C 100%);padding:100px 0 60px;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(232,83,26,.1) 0%,transparent 70%);}
+</style>
+</head>
+<body class="antialiased">
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+          <span class="font-sora font-black text-white text-base">H</span>
+        </div>
+        <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">About</a>
+        <a href="services.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Services</a>
+        <a href="projects.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember active">Projects</a>
+        <a href="contact.html" class="nav-link text-sm font-medium text-white/80 hover:text-ember ">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden lg:inline-flex btn-ember px-5 py-2 rounded-full text-sm">
+          Hire Me <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+        <button id="menu-toggle" class="lg:hidden text-white text-xl p-2">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-5 py-3 flex flex-col">
+      <a href="index.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Home</a>
+      <a href="about.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">About</a>
+      <a href="services.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Services</a>
+      <a href="projects.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Projects</a>
+      <a href="contact.html" class="text-white/80 hover:text-ember py-2.5 text-sm font-medium border-b border-white/10 last:border-0">Contact</a>
+      <a href="contact.html" class="btn-ember mt-3 px-5 py-3 rounded-full text-sm text-center">Hire Me Now</a>
+    </div>
+  </div>
+</header>
+<main class="pt-[68px]">
+<section class="page-hero">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 relative z-10">
+    <div class="reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">Portfolio</p>
+      <h1 class="font-sora text-4xl lg:text-5xl font-extrabold text-white mb-4">My <span class="gradient-text">Projects</span></h1>
+      <p class="text-white/60 font-poppins max-w-xl">100+ web projects delivered across e-commerce, corporate, education, and tourism sectors. Every project built with performance and SEO in mind.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS PREVIEW -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10">
+      <div class="flex flex-wrap gap-3 justify-center mb-10 reveal">
+        <button class="filter-tab bg-charcoal text-white px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="all">All Projects</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="ecommerce">E-commerce</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="corporate">Corporate</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="education">Education</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="tourism">Tourism</button>
+        <button class="filter-tab bg-white text-ink border border-stone px-5 py-2.5 rounded-full text-sm font-semibold font-poppins" data-filter="portfolio">Portfolio</button>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Cybersilo -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/cybersilo.png" alt="Cybersilo" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>CYBERSILO</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-ember text-white">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Cybersilo</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Cybersecurity & tech company — custom development with n8n automation workflows and JSON API integrations.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">JavaScript</span><span class="tag bg-white text-pebble border border-stone/60">n8n</span><span class="tag bg-white text-pebble border border-stone/60">JSON API</span></div>
+          </div>
+        </div>
+      
+        <!-- Lexro -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="ecommerce">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/lexro.png" alt="Lexro" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>LEXRO</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-ember text-white">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Lexro</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Premium bottles e-commerce store with advanced product filtering, cart system, and seamless payment integration.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WooCommerce</span><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span></div>
+          </div>
+        </div>
+      
+        <!-- Waze Driving School -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/driving.png" alt="Waze Driving School" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Waze Driving</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2023</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Waze Driving School</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">UK-based driving school website with lesson booking system, instructor profiles, and online enquiry forms.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">JavaScript</span></div>
+          </div>
+        </div>
+      
+        <!-- Khan Law Company -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/klc.png" alt="Khan Law Company" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Khan Law</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2023</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Khan Law Company</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Professional law firm website with case management features, attorney profiles, and client consultation booking.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">MySQL</span></div>
+          </div>
+        </div>
+      
+        <!-- Growistan -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/growistan.png" alt="Growistan" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>GROWISTAN</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Growistan Agency</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Full digital agency website — led as Head of Web Development with SEO-first architecture and performance optimization.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">SEO</span></div>
+          </div>
+        </div>
+      
+        <!-- Nikkah Pro -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/nikkah.png" alt="Nikkah Pro" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Nikkah Pro</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Nikkah Pro</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Online nikkah services platform with appointment scheduling, Islamic ceremony management, and secure client portal.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">WooCommerce</span></div>
+          </div>
+        </div>
+      
+        <!-- Pkg2Say -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/pkg2say.png" alt="Pkg2Say" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Pkg2Say</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Pkg2Say</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">New Jersey-based courier & logistics company with shipment tracking, quote calculator, and delivery management system.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">JavaScript</span></div>
+          </div>
+        </div>
+      
+        <!-- Study Abroad -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="education">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/studyabroad.png" alt="Study Abroad" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-warm-gray&quot;><span class=&quot;text-3xl font-black font-sora text-white&quot;>Study Abroad</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2023</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Study Abroad</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">International education consultancy with university listings, application management, and student guidance portal.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">MySQL</span></div>
+          </div>
+        </div>
+      
+        <!-- Mailnd Tech -->
+        <div class="project-card reveal bg-cream rounded-3xl border border-stone/60 overflow-hidden" data-category="corporate">
+          <div class="relative h-48 overflow-hidden">
+            <div class="project-img absolute inset-0"><img src="images/mailindtech.png" alt="Mailnd Tech" onerror="this.parentElement.innerHTML='<div class=&quot;flex items-center justify-center h-full bg-charcoal&quot;><span class=&quot;text-2xl font-black font-sora text-white text-center px-4&quot;>Mailnd Tech</span></div>'" class="w-full h-full object-cover"/></div>
+            <div class="project-overlay absolute inset-0 bg-charcoal/90 flex items-center justify-center gap-3"><a href="#" class="w-10 h-10 bg-ember rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"><i class="fas fa-link text-sm"></i></a><a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-ink hover:scale-110 transition-transform"><i class="fas fa-eye text-sm"></i></a></div>
+            <span class="absolute top-3 left-3 tag bg-charcoal text-white border border-white/20">2024</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-ink font-sora mb-1.5">Mailnd Tech</h3>
+            <p class="text-pebble text-sm font-poppins mb-3">Digital marketing agency website with service showcases, campaign portfolio, and client lead generation system.</p>
+            <div class="flex flex-wrap gap-1.5"><span class="tag bg-white text-pebble border border-stone/60">WordPress</span><span class="tag bg-white text-pebble border border-stone/60">PHP</span><span class="tag bg-white text-pebble border border-stone/60">SEO</span></div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+<!-- FAQ -->
+<section class="py-24 bg-cream">
+  <div class="max-w-3xl mx-auto px-5 lg:px-10">
+    <div class="text-center mb-12 reveal">
+      <p class="text-ember font-semibold text-sm font-poppins tracking-widest uppercase mb-3">FAQ</p>
+      <h2 class="section-title text-3xl font-extrabold text-ink font-sora mx-auto">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-3 reveal">
+      <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">What services do you offer?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">I offer WordPress development, React/front-end development, n8n automation workflows, SEO-optimized development, performance optimization, and Figma UI/UX design.</p></div></div>
+      <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">How long does a typical project take?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">A simple landing page: 3-5 days. A standard WordPress website: 1-2 weeks. A complex e-commerce or React application: 3-6 weeks. I always provide a clear timeline before starting.</p></div></div>
+      <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">Do you work with international clients?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">Yes! I've worked with clients from the UAE, UK, and across Pakistan. I'm comfortable with remote collaboration and flexible with time zones.</p></div></div>
+      <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">Do you provide ongoing support after launch?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">Yes! I offer post-launch support and maintenance packages including security updates, performance monitoring, and feature additions.</p></div></div>
+      <div class="faq-item border border-stone/60 rounded-2xl overflow-hidden bg-white"><button class="faq-trigger w-full flex items-center justify-between p-5 text-left"><span class="font-semibold text-ink font-sora text-sm">Can you help with website SEO?</span><i class="faq-icon fas fa-plus text-ember text-sm flex-shrink-0 ml-4"></i></button><div class="faq-answer px-5"><p class="text-pebble text-sm font-poppins pb-5 leading-relaxed">Absolutely. SEO-aware development is a core part of every project — semantic HTML, heading structure, schema markup, clean URLs, fast load times, and Core Web Vitals optimization.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bg-charcoal pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 lg:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Col 1: Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 bg-ember rounded-lg flex items-center justify-center">
+            <span class="font-sora font-black text-white text-base">H</span>
+          </div>
+          <span class="font-sora font-bold text-white text-lg">Hanzala<span class="text-ember">.</span></span>
+        </div>
+        <p class="text-white/50 font-poppins text-sm leading-relaxed mb-5">Pakistan's youngest performance-driven WordPress & full-stack developer. Building digital experiences that rank, convert, and scale.</p>
+        <div class="flex gap-2.5">
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-linkedin-in text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-github text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-whatsapp text-xs"></i></a>
+          <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-ember transition-colors duration-300"><i class="fab fa-upwork text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Pages -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Home</a></li>
+          <li><a href="about.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>About Me</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Services</a></li>
+          <li><a href="projects.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Projects</a></li>
+          <li><a href="contact.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>WordPress Dev</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>React Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>n8n Automation</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>Speed Optimization</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>SEO Development</a></li>
+          <li><a href="services.html" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-ember text-xs"></i>UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div>
+        <h4 class="font-sora font-bold text-white text-sm mb-5 uppercase tracking-wider">Contact</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-ember text-xs"></i></div>
+            <p class="text-white/50 text-sm font-poppins">Sargodha, Punjab, Pakistan</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-envelope text-ember text-xs"></i></div>
+            <a href="mailto:hanzala5c9@gmail.com" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">hanzala5c9@gmail.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-phone text-ember text-xs"></i></div>
+            <a href="tel:+923249473885" class="text-white/50 hover:text-ember text-sm font-poppins transition-colors">+92 324 9473885</a>
+          </div>
+          <div class="mt-4 inline-flex items-center gap-2 bg-ember/20 border border-ember/30 rounded-full px-4 py-2">
+            <span class="w-2 h-2 bg-ember rounded-full animate-pulse"></span>
+            <span class="text-ember text-xs font-poppins font-semibold">Available for Projects</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-white/40 text-xs font-poppins">© 2025 Muhammad Hanzala. All Rights Reserved.</p>
+      <p class="text-ember/50 text-xs font-poppins">Best WordPress Developer in Pakistan</p>
+    </div>
+  </div>
+</footer>
+<script>
+  // Sticky nav
+  window.addEventListener('scroll',()=>{
+    const n=document.getElementById('navbar');
+    n&&(window.scrollY>50?n.classList.add('scrolled'):n.classList.remove('scrolled'));
+  });
+  // Mobile menu
+  const mt=document.getElementById('menu-toggle');
+  if(mt){
+    mt.addEventListener('click',()=>{
+      const m=document.getElementById('mobile-menu');
+      const ic=document.getElementById('menu-icon');
+      m.classList.toggle('open');
+      ic.classList.toggle('fa-bars');
+      ic.classList.toggle('fa-times');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('menu-icon').classList.replace('fa-times','fa-bars');
+    }));
+  }
+  // Reveal
+  const ro=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+  // Counters
+  const co=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target,t=+el.dataset.target,inc=t/60;
+        let c=0;
+        const ti=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t+'+';clearInterval(ti);}else el.textContent=Math.floor(c);},25);
+        co.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+  // Skill bars
+  const so=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.style.width=b.dataset.width+'%');so.unobserve(e.target);}});
+  },{threshold:.2});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>so.observe(el));
+  // FAQ
+  document.querySelectorAll('.faq-trigger').forEach(tr=>{
+    tr.addEventListener('click',()=>{
+      const item=tr.closest('.faq-item'),ans=item.querySelector('.faq-answer'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').classList.remove('open');});
+      if(!open){item.classList.add('open');ans.classList.add('open');}
+    });
+  });
+  // Project filter
+  document.querySelectorAll('.filter-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-tab').forEach(t=>{t.classList.remove('bg-charcoal','text-white');t.classList.add('bg-white','text-ink','border','border-stone');});
+      tab.classList.add('bg-charcoal','text-white');tab.classList.remove('bg-white','text-ink','border','border-stone');
+      const f=tab.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(c=>{c.style.display=(f==='all'||c.dataset.category===f)?'block':'none';});
+    });
+  });
+  // Contact form
+  const cf=document.getElementById('contact-form');
+  if(cf){cf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=cf.querySelector('button[type="submit"]');
+    btn.innerHTML='<i class="fas fa-check mr-2"></i>Message Sent! Ill reply within 24 hours.';
+    btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane mr-2"></i>Send Message';btn.style.background='';cf.reset();},3000);
+  });}
+  // Typing
+  const typedEl=document.getElementById('typed');
+  if(typedEl){
+    const texts=["Best WordPress Developer in Pakistan","Full Stack Developer (React + Node.js)","n8n Automation Specialist","Performance & SEO Expert","Head of Web Dev @ Growistan"];
+    let ti=0,ci=0,del=false;
+    function type(){
+      const cur=texts[ti];
+      typedEl.textContent=del?cur.substring(0,ci--):cur.substring(0,ci++);
+      let d=del?40:80;
+      if(!del&&ci===cur.length+1){d=2000;del=true;}
+      else if(del&&ci===0){del=false;ti=(ti+1)%texts.length;d=400;}
+      setTimeout(type,d);
+    }
+    type();
+  }
+</script></body></html>
