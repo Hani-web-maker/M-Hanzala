@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+audit_progress.json
+audit_results.csv
+debug_batch_*.txt
+urls.txt
